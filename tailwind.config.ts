@@ -32,6 +32,10 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				tertiary: {
+					DEFAULT: 'hsl(var(--tertiary))',
+					foreground: 'hsl(var(--tertiary-foreground))'
+				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -51,6 +55,11 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				watch: {
+					orange: 'hsl(var(--watch-orange))',
+					gold: 'hsl(var(--watch-gold))',
+					blue: 'hsl(var(--watch-blue))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
