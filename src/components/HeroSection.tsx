@@ -1,7 +1,32 @@
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 import mockupImage from "@/assets/mockup-plataforma.png";
+import carousel1 from "@/assets/carousel-1.jpg";
+import carousel2 from "@/assets/carousel-2.jpg";
+import carousel3 from "@/assets/carousel-3.jpg";
 
 const HeroSection = () => {
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
+
+  const carouselImages = [
+    {
+      src: carousel1,
+      alt: "Interface da plataforma de streaming Watch"
+    },
+    {
+      src: carousel2,
+      alt: "Dashboard de analytics da Watch"
+    },
+    {
+      src: carousel3,
+      alt: "App móvel da Watch"
+    }
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Gradient Background */}
@@ -53,14 +78,31 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Mockup Image */}
+          {/* Carousel */}
           <div className="relative">
             <div className="relative z-10">
-              <img 
-                src={mockupImage} 
-                alt="Mockup da plataforma Watch" 
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
+              <Carousel
+                plugins={[plugin.current]}
+                className="w-full"
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
+              >
+                <CarouselContent>
+                  {carouselImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="relative">
+                        <img 
+                          src={image.src} 
+                          alt={image.alt} 
+                          className="w-full h-auto rounded-lg shadow-2xl object-cover aspect-video"
+                        />
+                        {/* Overlay gradient for better text contrast */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg" />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </div>
             
             {/* Decorative circles */}
