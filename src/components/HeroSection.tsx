@@ -9,7 +9,7 @@ import carousel3 from "@/assets/carousel-3.jpg";
 
 const HeroSection = () => {
   const plugin = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
+    Autoplay({ delay: 4000, stopOnInteraction: true, stopOnMouseEnter: true })
   );
 
   const carouselImages = [
