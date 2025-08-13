@@ -6,32 +6,27 @@ import mockupImage from "@/assets/mockup-plataforma.png";
 import carousel1 from "@/assets/carousel-1.png";
 import carousel2 from "@/assets/carousel-2.png";
 import carousel3 from "@/assets/carousel-3.png";
+import carousel4 from "@/assets/carousel-4.png";
+import { lookup } from "dns";
 
 const HeroSection = () => {
   const plugin = useRef(
-    Autoplay({ delay: 2500, stopOnInteraction: true, stopOnMouseEnter: true })
+    Autoplay({ delay: 2000, stopOnInteraction: true, stopOnMouseEnter: true })
+    
   );
 
   const carouselImages = [
-    {
-      src: carousel1,
-      alt: "Interface da plataforma de streaming Watch"
-    },
-    {
-      src: carousel2,
-      alt: "Dashboard de analytics da Watch"
-    },
-    {
-      src: carousel3,
-      alt: "App móvel da Watch"
-    }
+    { src: carousel1, alt: "Prêmio - Maior Satisfação" },
+    { src: carousel2, alt: "Prêmio - Melhor Provedor" },
+    { src: carousel3, alt: "Prêmio - Melhor Internet Gamer" },
+    { src: carousel4, alt: "Prêmio - Melhor Velocidade" },
   ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-watch-orange via-watch-blue to-watch-gold opacity-90" />
-      
+
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
@@ -54,14 +49,15 @@ const HeroSection = () => {
 
             <div className="space-y-6 text-lg leading-relaxed opacity-90">
               <p>
-                A <strong> mais veloz do Vale do Paranhana</strong> e <strong>entre as 3 melhores do estado do RS🏆</strong>
+                A <strong>mais veloz do Vale do Paranhana</strong> e{" "}
+                <strong>entre as 3 melhores do estado do RS🏆</strong>
               </p>
             </div>
           </div>
 
           {/* Carousel */}
           <div className="relative">
-            <div className="relative z-10">
+            <div className="relative z-10 w-4/5 mx-auto"> {/* largura reduzida */}
               <Carousel
                 plugins={[plugin.current]}
                 className="w-full"
@@ -71,21 +67,20 @@ const HeroSection = () => {
                 <CarouselContent>
                   {carouselImages.map((image, index) => (
                     <CarouselItem key={index}>
-                      <div className="relative">
-                        <img 
-                          src={image.src} 
-                          alt={image.alt} 
-                          className="w-full h-auto rounded-lg shadow-2xl object-cover aspect-video"
+                      <div className="relative shadow-none">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-auto rounded-lg object-cover aspect-video shadow-none"
                         />
-                        {/* Overlay gradient for better text contrast */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg" />
+                        <div className="absolute inset-0 bg-transparent rounded-lg" />
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
               </Carousel>
             </div>
-            
+
             {/* Decorative circles */}
             <div className="absolute inset-0 -z-10">
               <div className="absolute -top-8 -right-8 w-32 h-32 border-2 border-white/30 rounded-full" />

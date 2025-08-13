@@ -59,7 +59,6 @@ export default {
 				watch: {
 					orange: 'hsl(var(--watch-orange))',
 					gold: 'hsl(var(--watch-gold))',
-					blue: 'hsl(var(--watch-blue))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -70,6 +69,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				parananhana: {
+					red: 'hsl(var(--parananhana-red))',
+					purple: 'hsl(var(--parananhana-purple))',
+					'dark-red': 'hsl(var(--parananhana-dark-red))',
+					light: 'hsl(var(--parananhana-light))',
+					'text-light': 'hsl(var(--parananhana-text-light))'
 				}
 			},
 			borderRadius: {
@@ -98,6 +104,18 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			backgroundImage: {
+				'gradient-premium': 'var(--gradient-premium)',
+				'gradient-luxury': 'var(--gradient-luxury)',
+				'gradient-classic': 'var(--gradient-classic)',
+				'gradient-purple': 'var(--gradient-purple)',
+				'gradient-parananhana': 'var(--gradient-parananhana)',
+				'gradient-parananhana-dark': 'var(--gradient-parananhana-dark)'
+			},
+			boxShadow: {
+				'parananhana': 'var(--shadow-parananhana)',
+				'card-soft': 'var(--shadow-card)'
 			}
 		}
 	},

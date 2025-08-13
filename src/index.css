@@ -18,10 +18,13 @@ All colors MUST be HSL.
     --popover-foreground: 222.2 84% 4.9%;
 
     /* Watch Brasil color scheme adaptation */
-    --watch-orange: 18 76% 46%; /* #cd5d1b */
-    --watch-gold: 45 73% 49%; /* #dea220 */ 
-    --watch-blue: 210 44% 33%; /* #376192 */
-    
+    --watch-orange: 18 76% 46%;
+    /* #cd5d1b */
+    --watch-gold: 45 73% 49%;
+    /* #dea220 */
+    --watch-blue: 210 44% 33%;
+    /* #376192 */
+
     --primary: var(--watch-blue);
     --primary-foreground: 0 0% 100%;
 
@@ -59,6 +62,23 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: var(--watch-blue);
+    --gradient-blue: linear-gradient(135deg, #6475a2, #000815, #14263b);
+    --gradient-purple: linear-gradient(135deg, #67008c, #8b17a0, #350041);
+
+    --parananhana-red: 351 86% 56%;
+    --parananhana-purple: 292 44% 35%;
+    --parananhana-dark-red: 351 76% 46%;
+    --parananhana-light: 0 0% 98%;
+    --parananhana-text-light: 0 0% 95%;
+
+    --gradient-parananhana: linear-gradient(135deg, hsl(var(--parananhana-red)), hsl(var(--parananhana-purple)));
+    --gradient-parananhana-dark: linear-gradient(135deg, hsl(var(--parananhana-dark-red)), hsl(var(--parananhana-purple)));
+
+    --shadow-parananhana: 0 10px 40px -10px hsl(var(--parananhana-red) / 0.4);
+    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.1);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
