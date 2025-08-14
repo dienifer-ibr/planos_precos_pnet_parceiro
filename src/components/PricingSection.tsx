@@ -134,7 +134,7 @@ export function PricingSection() {
             <p className="text-sm text-muted-foreground">
               Tem dúvidas? Entre em contato conosco através{" "}
               <a
-                href="tel:1-866-952-4456"
+                href="tel:513543-1099"
                 className="text-primary hover:underline font-medium"
               >
                 (51) 3543-1099
