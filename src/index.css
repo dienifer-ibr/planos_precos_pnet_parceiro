@@ -79,6 +79,15 @@ All colors MUST be HSL.
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Refer and Earn Design System */
+    --refer-primary: 214 100% 45%;
+    --refer-secondary: 158 64% 52%;
+    --refer-accent: 194 84% 60%;
+    --refer-gradient: linear-gradient(135deg, hsl(214 100% 45%) 0%, hsl(194 84% 60%) 50%, hsl(158 64% 52%) 100%);
+    --refer-gradient-subtle: linear-gradient(145deg, hsl(214 100% 96%) 0%, hsl(158 64% 96%) 100%);
+    --refer-shadow: 0 10px 25px -5px hsl(214 100% 45% / 0.25);
+    --refer-glow: 0 0 30px hsl(214 100% 45% / 0.3);
+
   }
 
   .dark {

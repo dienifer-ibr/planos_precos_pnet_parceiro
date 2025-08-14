@@ -116,7 +116,14 @@ export default {
 			boxShadow: {
 				'parananhana': 'var(--shadow-parananhana)',
 				'card-soft': 'var(--shadow-card)'
-			}
+			},
+			refer: {
+				primary: 'hsl(var(--refer-primary))',
+				secondary: 'hsl(var(--refer-secondary))',
+				accent: 'hsl(var(--refer-accent))',
+				gradient: 'var(--refer-gradient)',
+				gradientSubtle: 'var(--refer-gradient-subtle)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

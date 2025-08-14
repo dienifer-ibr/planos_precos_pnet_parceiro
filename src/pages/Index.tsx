@@ -20,8 +20,8 @@ const Index = () => {
         <TechSection />
         <PricingSection />
         <ParanhanaClube />
-        <Watch />
         <ParanhanaPlay />
+        <Watch />
         <ParanhanaLivrosRevistas />
         <IndiqueGanhe />
         <Depoimentos />
