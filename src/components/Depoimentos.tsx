@@ -162,7 +162,7 @@ const ReviewsShowcase = () => {
     <section className="relative py-16 min-h-screen bg-gradient-to-b from-white to-pink-400">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Vídeos */}
-        <div className="mb-6">
+        <div className="mb-16">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-primary">
               O que dizem nossos clientes?

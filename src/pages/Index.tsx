@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import ParanhanaClube from "@/components/ParanhanaClube";
 import ParanhanaPlay from "@/components/ParanhanaPlay";
 import Depoimentos from "@/components/Depoimentos";
-
+import ParanhanaLivrosRevistas from "@/components/ParanhanaLivrosRevistas";
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -18,6 +18,7 @@ const Index = () => {
         <PricingSection />
         <ParanhanaClube />
         <ParanhanaPlay />
+        <ParanhanaLivrosRevistas />
         <Depoimentos />
         <FAQSection />
       </main>
