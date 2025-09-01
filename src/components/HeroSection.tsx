@@ -1,4 +1,4 @@
-import mockupImage from "@/assets/mockup-plataforma.png";
+import parobe from "@/assets/parobe.jpg";
 import carousel1 from "@/assets/carousel-1.png";
 import carousel2 from "@/assets/carousel-2.png";
 import carousel3 from "@/assets/carousel-3.png";
@@ -16,7 +16,7 @@ const HeroSection = () => {
   return (
     <section
       className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${mockupImage})` }}
+      style={{ backgroundImage: `url(${parobe})` }}
     >
       <div className="absolute inset-0 bg-blue-700/80" />
 
