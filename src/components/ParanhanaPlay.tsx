@@ -1,5 +1,6 @@
 import React from "react";
 import ParanhanaPlay_Fundo from "@/assets/ParanhanaPlayFundo.jpg";
+import LogoParanhana_Play from "@/assets/LogoParanhanaPlay.png";
 import Paranhana_Play from "@/assets/ParanhanaPlay.png";
 
 const ParanhanaPlay: React.FC = () => {
@@ -15,20 +16,23 @@ const ParanhanaPlay: React.FC = () => {
             </div>
 
             <div className="relative z-10 flex flex-col items-center justify-center text-white text-center px-4">
-                <h1 className="text-4xl md:text-6xl font-bold mb-20">
-                    PARANHANA PLAY
-                </h1>
-
                 <img
                     src={Paranhana_Play}
                     alt="Filmes e pipocas"
-                    className="w-full max-w-none h-auto"
+                    className="w-full h-auto"
+                />
+
+                <img
+                    src={LogoParanhana_Play}
+                    alt="Logo Paranhana Play"
+                    className="absolute top-[-45px] left-[38%] transform -translate-x-1/2 w-3/4 max-w-xs"
                 />
 
                 <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-3xl mt-20">
                     +2000 filmes, +150 canais de TV grátis e streaming on-demand em qualquer lugar.
                 </p>
             </div>
+
         </section>
     );
 };

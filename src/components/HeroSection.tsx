@@ -1,21 +1,12 @@
-import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
 import mockupImage from "@/assets/mockup-plataforma.png";
 import carousel1 from "@/assets/carousel-1.png";
 import carousel2 from "@/assets/carousel-2.png";
 import carousel3 from "@/assets/carousel-3.png";
 import carousel4 from "@/assets/carousel-4.png";
-import { lookup } from "dns";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
-  const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true, stopOnMouseEnter: true })
-    
-  );
-
-  const carouselImages = [
+  const awardImages = [
     { src: carousel1, alt: "Prêmio - Maior Satisfação" },
     { src: carousel2, alt: "Prêmio - Melhor Provedor" },
     { src: carousel3, alt: "Prêmio - Melhor Internet Gamer" },
@@ -23,20 +14,22 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-watch-orange via-watch-blue to-watch-gold opacity-90" />
+    <section
+      className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: `url(${mockupImage})` }}
+    >
+      {/* Camada azul escura transparente */}
+      <div className="absolute inset-0 bg-blue-700/80" />
 
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 -left-40 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-white/10 rounded-full blur-2xl" />
+      {/* Logo centralizada no topo */}
+      <div className="relative z-10 w-full flex justify-center pt-20">
+        <img src={logo} alt="ParanhanaNet" className="w-48 lg:w-60" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
+      {/* Conteúdo principal */}
+      <div className="relative z-10 flex-1 flex items-center w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+          {/* Texto */}
           <div className="text-white space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
@@ -49,44 +42,22 @@ const HeroSection = () => {
 
             <div className="space-y-6 text-lg leading-relaxed opacity-90">
               <p>
-                A <strong>mais veloz do Vale do Paranhana</strong> e{" "}
-                <strong>entre as 3 melhores do estado do RS🏆</strong>
+                A <strong>mais veloz do Vale do Paranhana</strong> <br />
+                <strong>entre as 3 melhores do estado do RS 🏆</strong>
               </p>
             </div>
           </div>
 
-          {/* Carousel */}
-          <div className="relative">
-            <div className="relative z-10 w-4/5 mx-auto"> {/* largura reduzida */}
-              <Carousel
-                plugins={[plugin.current]}
-                className="w-full"
-                onMouseEnter={plugin.current.stop}
-                onMouseLeave={plugin.current.reset}
-              >
-                <CarouselContent>
-                  {carouselImages.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <div className="relative shadow-none">
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-auto rounded-lg object-cover aspect-video shadow-none"
-                        />
-                        <div className="absolute inset-0 bg-transparent rounded-lg" />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
-            </div>
-
-            {/* Decorative circles */}
-            <div className="absolute inset-0 -z-10">
-              <div className="absolute -top-8 -right-8 w-32 h-32 border-2 border-white/30 rounded-full" />
-              <div className="absolute top-1/2 -left-12 w-24 h-24 border-2 border-white/20 rounded-full" />
-              <div className="absolute -bottom-6 right-1/4 w-20 h-20 border-2 border-white/25 rounded-full" />
-            </div>
+          {/* Premiações */}
+          <div className="flex flex-col items-end space-y-6">
+            {awardImages.map((image, index) => (
+              <img
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                className="w-56 lg:w-64 rounded-2xl shadow-lg object-contain"
+              />
+            ))}
           </div>
         </div>
       </div>
