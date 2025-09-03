@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import ParanhanaClube from "@/components/ParanhanaClube";
 import ParanhanaPlay from "@/components/ParanhanaPlay";
 import Depoimentos from "@/components/Depoimentos";
-import ParanhanaLivrosRevistas from "@/components/ParanhanaLivrosRevistas";
+import ParanhanaLivrosRevistas from "@/components/ParanhanaRevistas";
 import Watch from "@/components/Watch";
 import IndiqueGanhe from "@/components/IndiqueGanhe";
 

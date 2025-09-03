@@ -2,9 +2,11 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { SiWhatsapp } from "react-icons/si";
 
 interface PlanCardProps {
   title: string;
+  title2: string;
   price: string;
   originalPrice?: string;
   description: string;
@@ -15,6 +17,7 @@ interface PlanCardProps {
 
 export function PlanCard({
   title,
+  title2,
   price,
   originalPrice,
   description,
@@ -44,15 +47,18 @@ export function PlanCard({
           </Badge>
         </div>
       )}
-      
-      <CardHeader className="text-center pb-8">
+
+      <CardHeader className="text-initial pb-8">
         <CardTitle className="text-2xl font-bold text-foreground">
           {title}
         </CardTitle>
-        <CardDescription className="text-muted-foreground">
+        <CardTitle className="text-4xl font-bold text-foreground">
+          {title2}
+        </CardTitle>
+        <CardDescription className="text-center text-muted-foreground">
           {description}
         </CardDescription>
-        
+
         <div className="pt-4">
           <div className="flex items-baseline justify-center gap-2">
             {originalPrice && (
@@ -78,10 +84,11 @@ export function PlanCard({
           ))}
         </ul>
 
-        <Button 
+        <Button
           className="w-full mt-6"
         >
-          Escolher Plano
+          <SiWhatsapp className="w-6 h-6" />
+          Contrate Já
         </Button>
       </CardContent>
     </Card>

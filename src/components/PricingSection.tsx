@@ -7,10 +7,11 @@ export function PricingSection() {
 
   const plans = [
     {
-      title: "Básico",
+      title: "Plano",
+      title2: "Laranja",
       price: "R$ 25,90",
       originalPrice: "R$ 35,90",
-      description: "Perfeito para iniciantes",
+      description: "Internet estável para o dia a dia, sem travar",
       features: [
         "Assistir em 1 dispositivo simultaneamente",
         "Downloads em 1 telefone ou tablet",
@@ -99,7 +100,7 @@ export function PricingSection() {
           <div className="relative">
             <button
               onClick={() => scroll("left")}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-background/80 p-2 rounded-full shadow-md hover:bg-background z-10"
+              className="absolute left-0 top-1/6 -translate-y-1/6 bg-background/80 p-1 rounded-full shadow-md hover:bg-background z-10"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -124,7 +125,7 @@ export function PricingSection() {
 
             <button
               onClick={() => scroll("right")}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-background/80 p-2 rounded-full shadow-md hover:bg-background z-10"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-background/80 p-1 rounded-full shadow-md hover:bg-background z-10"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
