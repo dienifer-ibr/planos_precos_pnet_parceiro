@@ -62,7 +62,7 @@ const FAQSection: React.FC = () => {
     <section
       className="py-8 text-white"
       style={{
-        background: "linear-gradient(135deg, #376192 0%, #1f5594 100%)",
+        background: "linear-gradient(135deg, #76b1f4ff 0%, #1f5594 100%)",
       }}
     >
       <div className="max-w-4xl mx-auto px-4">

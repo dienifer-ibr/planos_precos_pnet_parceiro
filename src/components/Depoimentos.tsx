@@ -161,12 +161,10 @@ const ReviewsShowcase = () => {
   return (
     <section className="relative py-16 min-h-screen bg-gradient-to-b from-white to-pink-400">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Vídeos */}
-        <div className="mb-16">
+
+        <div className="mb-16 flex flex-col">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-primary">
-              O que dizem nossos clientes?
-            </h2>
+            <h2 className="text-3xl font-bold text-primary">O que dizem nossos clientes?</h2>
             <div className="flex gap-2">
               <Button variant="outline" size="icon" onClick={goToPreviousVideo}>
                 <ChevronLeft className="h-5 w-5" />
@@ -176,8 +174,9 @@ const ReviewsShowcase = () => {
               </Button>
             </div>
           </div>
+
           <div
-            className="relative overflow-hidden"
+            className="relative overflow-hidden flex items-center h-80 md:h-96"
             onMouseEnter={() => setIsHoveringVideo(true)}
             onMouseLeave={() => setIsHoveringVideo(false)}
           >
@@ -198,11 +197,7 @@ const ReviewsShowcase = () => {
                   onClick={() => openVideo(video.youtubeId)}
                 >
                   <div className="relative aspect-video overflow-hidden">
-                    <img
-                      src={video.thumbnail}
-                      alt={video.title}
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={video.thumbnail} alt={video.title} className="w-full h-full object-cover" />
                     <div className="absolute bottom-3 right-3 bg-black/80 text-white text-sm px-3 py-1 rounded-full font-medium">
                       {video.duration}
                     </div>
@@ -225,10 +220,9 @@ const ReviewsShowcase = () => {
           </div>
         </div>
 
-        {/* Reviews */}
-        <div>
+        <div className="flex items-center h-80 md:h-96">
           <div
-            className="relative overflow-hidden"
+            className="relative overflow-hidden w-full"
             onMouseEnter={() => setIsHoveringReview(true)}
             onMouseLeave={() => setIsHoveringReview(false)}
           >
@@ -248,11 +242,7 @@ const ReviewsShowcase = () => {
                   onMouseLeave={() => setHoveredItem(null)}
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <img
-                      src={review.avatar}
-                      alt={review.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
+                    <img src={review.avatar} alt={review.name} className="w-12 h-12 rounded-full object-cover" />
                     <div>
                       <h3 className="font-bold">{review.name}</h3>
                       <p className="text-sm text-muted-foreground">{review.location}</p>
@@ -263,10 +253,7 @@ const ReviewsShowcase = () => {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-5 w-5 ${i < review.rating
-                              ? "text-yellow-400 fill-yellow-400"
-                              : "text-muted-foreground"
-                            }`}
+                          className={`h-5 w-5 ${i < review.rating ? "text-yellow-400 fill-yellow-400" : "text-muted-foreground"}`}
                         />
                       ))}
                     </div>

@@ -1,31 +1,32 @@
 import React from "react";
-import CelularRevistas from "@/assets/CelularRevistas.png";
-import Revistas from "@/assets/paranhanarevistas.png";
-import LogoParanhanaRevistas from "@/assets/LogoParanhanaRevistas.png";
+import CelularLivros from "@/assets/CelularLivros.png";
+import Livros from "@/assets/Livros.png";
+import LogoParanhanaLivros from "@/assets/LogoParanhanaLivros.png";
 
-const ParanhanaRevistas: React.FC = () => {
+const ParanhanaLivros: React.FC = () => {
     return (
         <section
             className="relative w-full h-screen bg-cover bg-center"
             style={{
-                backgroundImage: `url(${Revistas})`,
+                backgroundImage: `url(${Livros})`,
             }}
         >
-            <div className="absolute inset-0 bg-orange-500 bg-opacity-90"></div>
+            <div className="absolute inset-0 bg-blue-400 bg-opacity-90"></div>
 
             <div className="absolute top-48 left-1/3 transform -translate-x-1/4">
-                <img src={LogoParanhanaRevistas} alt="ParanhanaNet" className="w-96 lg:w-96" />
+                <img src={LogoParanhanaLivros} alt="ParanhanaNet" className="w-96 lg:w-96" />
             </div>
 
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
                 <div className="absolute left-1/2 transform -translate-x-1/2">
                     <img
-                        src={CelularRevistas}
+                        src={CelularLivros}
                         alt="Filmes e pipocas"
                         className="h-auto object-center w-60 lg:w-68"
                     />
                     <p className="absolute bottom-[-70px] left-1/2 transform -translate-x-1/2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-full px-4 md:px-6">
-                        Plataforma digital completa, com diversas opções de revistas para você acessar quando e onde quiser                    </p>
+                        frase frase frase
+                    </p>
                 </div>
             </div>
 
@@ -33,4 +34,4 @@ const ParanhanaRevistas: React.FC = () => {
     );
 };
 
-export default ParanhanaRevistas;
+export default ParanhanaLivros;
