@@ -9,22 +9,19 @@ export function PricingSection() {
     {
       title: "Plano",
       title2: "Laranja",
-      price: "R$ 25,90",
-      originalPrice: "R$ 35,90",
       description: "Internet estável para o dia a dia, sem travar",
       features: [
-        "Assistir em 1 dispositivo simultaneamente",
-        "Downloads em 1 telefone ou tablet",
-        "Qualidade HD disponível",
-        "Filmes e séries ilimitados",
-        "Cancelar quando quiser",
+        "Mão de obra especializada",
+        "Roteador Wi-fi última geração",
+        "Gerenciamento da rede interna (SGRI)",
+        "Suporte Premium 24/7",
+        "600 Mega",
       ],
-      variant: "classic" as const,
+      variant: "laranja" as const,
     },
     {
-      title: "Padrão",
-      price: "R$ 45,90",
-      originalPrice: "R$ 55,90",
+      title: "Plano",
+      title2: "Marron",
       description: "Mais popular para famílias",
       features: [
         "Assistir em 2 dispositivos simultaneamente",
@@ -34,13 +31,11 @@ export function PricingSection() {
         "Cancelar quando quiser",
         "Sem anúncios",
       ],
-      popular: true,
-      variant: "classic" as const,
+      variant: "marron" as const,
     },
     {
-      title: "Premium",
-      price: "R$ 65,90",
-      originalPrice: "R$ 75,90",
+      title: "Plano",
+      title2: "Marfim",
       description: "A melhor experiência",
       features: [
         "Assistir em 4 dispositivos simultaneamente",
@@ -49,9 +44,54 @@ export function PricingSection() {
         "Filmes e séries ilimitados",
         "Cancelar quando quiser",
         "Sem anúncios",
-        "Audio espacial disponível",
+        "Áudio espacial disponível",
       ],
-      variant: "classic" as const,
+      variant: "marfim" as const,
+    },
+    {
+      title: "Plano",
+      title2: "Bordô",
+      description: "A melhor experiência",
+      features: [
+        "Assistir em 4 dispositivos simultaneamente",
+        "Downloads em 6 telefones ou tablets",
+        "Qualidade Ultra HD 4K + HDR",
+        "Filmes e séries ilimitados",
+        "Cancelar quando quiser",
+        "Sem anúncios",
+        "Áudio espacial disponível",
+      ],
+      variant: "bordo" as const,
+    },
+    {
+      title: "Plano",
+      title2: "Neon Gamer",
+      description: "A melhor experiência",
+      features: [
+        "Assistir em 4 dispositivos simultaneamente",
+        "Downloads em 6 telefones ou tablets",
+        "Qualidade Ultra HD 4K + HDR",
+        "Filmes e séries ilimitados",
+        "Cancelar quando quiser",
+        "Sem anúncios",
+        "Áudio espacial disponível",
+      ],
+      variant: "neon" as const,
+    },
+    {
+      title: "Plano",
+      title2: "Neon Gamer",
+      description: "A melhor experiência",
+      features: [
+        "Assistir em 4 dispositivos simultaneamente",
+        "Downloads em 6 telefones ou tablets",
+        "Qualidade Ultra HD 4K + HDR",
+        "Filmes e séries ilimitados",
+        "Cancelar quando quiser",
+        "Sem anúncios",
+        "Áudio espacial disponível",
+      ],
+      variant: "neon2" as const,
     },
   ];
 
@@ -67,7 +107,6 @@ export function PricingSection() {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Ondas animadas topo */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
         <svg
           className="relative block w-full h-20 animate-wave"
@@ -76,7 +115,7 @@ export function PricingSection() {
           preserveAspectRatio="none"
         >
           <path
-            fill="#a3cef1"
+            fill="#dcefffff"
             fillOpacity="0.4"
             d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,74.7C672,53,768,43,864,53.3C960,64,1056,96,1152,90.7C1248,85,1344,43,1392,21.3L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
           />
@@ -88,11 +127,10 @@ export function PricingSection() {
         </svg>
       </div>
 
-      {/* Fundo gradiente azul claro com branco */}
       <section className="py-24 px-4 bg-gradient-to-b from-[#a3cef1]/60 via-white/70 to-[#a3cef1]/60 relative z-10">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-4">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-primary mb-16">
               Conheça nossos planos
             </h2>
           </div>
@@ -100,7 +138,7 @@ export function PricingSection() {
           <div className="relative">
             <button
               onClick={() => scroll("left")}
-              className="absolute left-0 top-1/6 -translate-y-1/6 bg-background/80 p-1 rounded-full shadow-md hover:bg-background z-10"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-background/80 p-1 rounded-full shadow-md hover:bg-background z-10"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -108,9 +146,7 @@ export function PricingSection() {
             <div
               ref={scrollRef}
               className="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar px-[50%] -mx-[50%]"
-              style={{
-                scrollSnapType: "x mandatory",
-              }}
+              style={{ scrollSnapType: "x mandatory" }}
             >
               {plans.map((plan, index) => (
                 <div
@@ -145,7 +181,6 @@ export function PricingSection() {
         </div>
       </section>
 
-      {/* Ondas animadas base */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
         <svg
           className="relative block w-full h-20 animate-wave"
@@ -175,7 +210,6 @@ export function PricingSection() {
             transform: translateX(-50%);
           }
         }
-
         .animate-wave path {
           animation: wave 6s linear infinite;
         }

@@ -5,35 +5,42 @@ import FilmesPipocas from "@/assets/filmes-pipocas.png";
 const Watch: React.FC = () => {
     return (
         <section
-            className="relative w-full h-screen bg-cover bg-center"
+            className="relative w-full min-h-screen bg-cover bg-center"
             style={{
                 backgroundImage: `url(${ControleWatch})`,
             }}
         >
+            {/* Overlay azul */}
             <div className="absolute inset-0 bg-blue-500 bg-opacity-80"></div>
 
-            <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <div className="absolute top-[240px] w-full max-w-2xl text-left left-4">
-                    <p className="text-lg md:text-xl mb-2">
+            {/* Conteúdo */}
+            <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4 py-8 gap-6">
+                <div className="max-w-xl w-full relative left-[-20%] top-40">
+                    <p className="text-lg md:text-xl mb-0">
                         STREAMING BY
                     </p>
-                    <h1 className="text-4xl md:text-6xl font-bold">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-0">
                         WATCHᴮᴿ
-                    </h1>
-                    <h1 className="text-4xl md:text-6xl font-bold">
-                        +PARAMOUNT
-                    </h1>
+                    </h2>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tightmb-0 ">
+                        +
+                    </h2>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-0">
+                        Paramount
+                    </h2>
                 </div>
-                <div className="absolute w-full left-5">
+
+                <div className="w-full max-w-3xl relative">
                     <img
                         src={FilmesPipocas}
                         alt="Filmes e pipocas"
-                        className="w-full h-auto object-right"
+                        className="absolute w-full h-auto object-contain mb-0"
                     />
-                    <p className="absolute bottom-[90px] left-1/2 transform -translate-x-1/2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-full max-w-[90%] px-4 md:px-6 text-center">
+
+                    <p className="mt-96 mb-20 text-base sm:text-lg md:text-xl lg:text-2xl px-4 md:px-6 text-center">
                         Acesse quando e onde estiver, Canais de tv aberta, Séries e Filmes
                     </p>
-                    <p className="absolute bottom-[-35px] left-1/2 transform -translate-x-1/2 text-lg md:text-xl w-[80%] text-center">
+                    <p className="mt-1 text-sm sm:text-base md:text-lg text-center">
                         *incluso nos planos premium
                     </p>
                 </div>

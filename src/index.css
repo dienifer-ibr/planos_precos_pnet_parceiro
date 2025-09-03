@@ -24,6 +24,7 @@ All colors MUST be HSL.
     /* #dea220 */
     --watch-blue: 210 44% 33%;
     /* #376192 */
+    --watch-brown: 30 25% 40%;
 
     --primary: var(--watch-blue);
     --primary-foreground: 0 0% 100%;
@@ -129,6 +130,7 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: var(--watch-blue);
+
   }
 }
 
