@@ -21,14 +21,14 @@ const ParanhanaClube = () => {
         <img
           src={CllParanhanaClube}
           alt="Decorativa"
-          className="w-60 md:w-96 relative left-[-20%] mt-20"
+          className="w-60 md:w-96 relative left-[-20%]"
         />
-        <h1 className="text-white text-4xl md:text-6xl font-bold text-end md:-mt-0 leading-tight relative right-[-20%] mb-10">
+        <h1 className="text-white text-4xl md:text-6xl font-bold text-end md:-mt-0 mb-10 leading-tight relative right-[-20%]">
           Vantagens <br />
-          <span className=" -top-4 md:-top-4 text-5xl md:text-6xl">Exclusivas</span>
+          <span className=" -top-6 md:-top-4 text-5xl md:text-6xl">Exclusivas</span>
         </h1>
 
-        <p className="text-white text-center">
+        <p className="text-white text-center mb-10">
           Até 50% de descontos em lojas online e estabelecimento da região.
         </p>
 
