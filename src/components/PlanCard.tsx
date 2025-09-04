@@ -4,10 +4,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { SiWhatsapp } from "react-icons/si";
 
-import iconPlay from "@/assets/logo-branca.png";
-import iconClube from "@/assets/logo-branca.png";
-import iconLivros from "@/assets/logo-branca.png";
-import iconRevistas from "@/assets/logo-branca.png";
+interface Benefit {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+interface benefitsAdd {
+  icon: string;
+  title: string;
+  desc: string;
+}
 
 interface PlanCardProps {
   title: string;
@@ -15,7 +22,9 @@ interface PlanCardProps {
   description: string;
   features: string[];
   popular?: boolean;
-  variant: "laranja" | "marron" | "marfim" | "bordo" | "neon" | "neon2";
+  benefits: Benefit[];
+  benefitsAdd?: benefitsAdd[];
+  variant: "laranja" | "marron" | "marfim" | "bordo" | "neon" | "neon2" | "dourado";
 }
 
 export function PlanCard({
@@ -24,6 +33,8 @@ export function PlanCard({
   description,
   features,
   popular = false,
+  benefits,
+  benefitsAdd,
   variant
 }: PlanCardProps) {
   const getVariantClasses = () => {
@@ -34,31 +45,35 @@ export function PlanCard({
           badge: "bg-orange-500 text-white",
           blockBg: "bg-orange-500 text-white",
           title: "text-orange-600",
-          button: "bg-orange-500 hover:bg-orange-600 text-white"
+          button: "bg-orange-500 hover:bg-orange-600 text-white",
+          color: "text-orange-600",
         };
       case "marron":
         return {
           card: "border-steel/20 bg-gradient-to-br from-card to-steel/5 hover:shadow-glow",
-          badge: "bg-[hsl(var(--watch-brown))] text-white",
-          blockBg: "bg-[hsl(var(--watch-brown))] text-white",
-          title: "text-[hsl(var(--watch-brown))]",
-          button: "bg-[hsl(var(--watch-brown))] hover:bg-[hsl(var(--watch-brown)/0.9)] text-white"
+          badge: "bg-amber-900 text-white",
+          blockBg: "bg-amber-900 text-white",
+          title: "text-amber-900",
+          button: "bg-amber-900 hover:bg-amber-950 text-white",
+          color: "text-amber-900",
         };
       case "marfim":
         return {
           card: "border-steel/20 bg-gradient-to-br from-card to-steel/5 hover:shadow-glow",
           badge: "bg-orange-300 text-white",
           blockBg: "bg-orange-300 text-white",
-          title: "text-orange-300",
-          button: "bg-orange-300 hover:bg-orange-300 text-white"
+          title: "text-orange-400",
+          button: "bg-orange-300 hover:bg-orange-400 text-white",
+          color: "text-orange-400",
         };
       case "bordo":
         return {
           card: "border-steel/20 bg-gradient-to-br from-card to-steel/5 hover:shadow-glow",
-          badge: "bg-red-800 text-white",
-          blockBg: "bg-red-800 text-white",
-          title: "text-red-800",
-          button: "bg-red-800 hover:bg-red-800 text-white"
+          badge: "bg-red-900 text-white",
+          blockBg: "bg-red-900 text-white",
+          title: "text-red-900",
+          button: "bg-red-900 hover:bg-red-800 text-white",
+          color: "text-red-900",
         };
       case "neon":
         return {
@@ -66,7 +81,8 @@ export function PlanCard({
           badge: "bg-purple-600 text-white",
           blockBg: "bg-purple-600 text-white",
           title: "text-purple-600",
-          button: "bg-purple-600 hover:bg-purple-700 text-white"
+          button: "bg-purple-600 hover:bg-purple-700 text-white",
+          color: "text-purple-600",
         };
       case "neon2":
         return {
@@ -74,19 +90,22 @@ export function PlanCard({
           badge: "bg-green-600 text-white",
           blockBg: "bg-green-600 text-white",
           title: "text-green-600",
-          button: "bg-green-600 hover:bg-green-700 text-white"
+          button: "bg-green-600 hover:bg-green-700 text-white",
+          color: "text-green-600",
+        };
+      case "dourado":
+        return {
+          card: "border-steel/20 bg-gradient-to-br from-card to-steel/5 hover:shadow-glow",
+          badge: "bg-yellow-600 text-white",
+          blockBg: "bg-yellow-600 text-white",
+          title: "text-yellow-600",
+          button: "bg-yellow-600 hover:bg-yellow-700 text-white",
+          color: "text-yellow-600",
         };
     }
   };
 
   const variantClasses = getVariantClasses();
-
-  const benefits = [
-    { icon: iconPlay, title: "PARANHANAPLAY", desc: "3 Acessos Simultâneos" },
-    { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
-    { icon: iconLivros, title: "PARANHANALIVROS", desc: "3 Livros Digital Mensal" },
-    { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
-  ];
 
   return (
     <Card className={`relative transition-all duration-300 hover:scale-105 ${variantClasses.card}`}>
@@ -102,14 +121,14 @@ export function PlanCard({
         <CardTitle className={`text-xl sm:text-2xl md:text-3xl font-bold ${variantClasses.title}`}>
           {title}
         </CardTitle>
-        <CardTitle className={`text-2xl sm:text-4xl md:text-5xl font-bold ${variantClasses.title}`}>
+        <CardTitle className={`text-3xl sm:text-4xl md:text-5xl font-bold ${variantClasses.title}`}>
           {title2}
         </CardTitle>
         <CardDescription className="text-center text-xs sm:text-sm md:text-base text-muted-foreground">
           {description}
         </CardDescription>
 
-        <p className="text-center text-xs sm:text-sm md:text-base text-muted-foreground">
+        <p className={`text-center text-xs sm:text-sm md:text-base text-muted-foreground ${variantClasses.color} -mb-2`}>
           Incluso no combo:
         </p>
 
@@ -120,7 +139,7 @@ export function PlanCard({
                 <img
                   src={b.icon}
                   alt={b.title}
-                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-2"
+                  className="w-10 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-2"
                 />
                 <h6 className="font-semibold text-[9px] sm:text-[11px] md:text-xs lg:text-sm">
                   {b.title}
@@ -130,7 +149,21 @@ export function PlanCard({
                 </p>
               </div>
             ))}
+
+            {benefitsAdd?.map((b, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <img
+                  src={b.icon}
+                  alt={b.title}
+                  className="w-24 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 -mb-2 -mt-2"
+                />
+                <p className="text-[7px] sm:text-[9px] md:text-xs lg:text-sm leading-tight mt-0">
+                  {b.desc}
+                </p>
+              </div>
+            )) ?? null}
           </div>
+
         </div>
       </CardHeader>
 

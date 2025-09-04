@@ -1,7 +1,12 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PlanCard } from "@/components/PlanCard";
-
+import iconPlay from "@/assets/icon-pplay.png";
+import iconClube from "@/assets/icon-pclube.png";
+import iconLivros from "@/assets/icons-plivros.png";
+import iconRevistas from "@/assets/icon-previstas.png";
+import iconWatch from "@/assets/logoWatch.png";
+import iconParamount from "@/assets/logoParamount.png";
 export function PricingSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -17,81 +22,144 @@ export function PricingSection() {
         "Suporte Premium 24/7",
         "600 Mega",
       ],
+      benefits: [
+        { icon: iconPlay, title: "PARANHANAPLAY", desc: "3 Acessos Simultâneos" },
+        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: "3 Livros Digital Mensal" },
+        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
+      ],
       variant: "laranja" as const,
     },
     {
       title: "Plano",
       title2: "Marron",
-      description: "Mais popular para famílias",
+      description: "Conectividade de alto nível para todos os seus dispositivos",
       features: [
-        "Assistir em 2 dispositivos simultaneamente",
-        "Downloads em 2 telefones ou tablets",
-        "Qualidade Full HD disponível",
-        "Filmes e séries ilimitados",
-        "Cancelar quando quiser",
-        "Sem anúncios",
+        "Mão de obra especializada",
+        "Roteador Wi-fi última geração",
+        "Câmera Monitoramento Adicional",
+        "Gerenciamento da rede interna (SGRI)",
+        "Suporte Premium 24/7 ",
+        "700 Mega",
+      ],
+      benefits: [
+        { icon: iconPlay, title: "PARANHANAPLAY", desc: "4 Acessos Simultâneos" },
+        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: " 4 Livros Digital Mensal + 1 AudioBook" },
+        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
       ],
       variant: "marron" as const,
     },
     {
       title: "Plano",
       title2: "Marfim",
-      description: "A melhor experiência",
+      description: "Potência e performance para todos os seus dispositivos",
       features: [
-        "Assistir em 4 dispositivos simultaneamente",
-        "Downloads em 6 telefones ou tablets",
-        "Qualidade Ultra HD 4K + HDR",
-        "Filmes e séries ilimitados",
-        "Cancelar quando quiser",
-        "Sem anúncios",
-        "Áudio espacial disponível",
+        "Mão de obra especializada",
+        "Roteador Wi-fi última geração",
+        "Gerenciamento da rede interna (SGRI)",
+        "Suporte Premium 24/7",
+        "800 Mega",
+      ],
+      benefits: [
+        { icon: iconPlay, title: "PARANHANAPLAY", desc: "4 Acessos Simultâneos" },
+        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: " 4 Livros Digital Mensal + 1 AudioBook" },
+        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
       ],
       variant: "marfim" as const,
     },
     {
       title: "Plano",
       title2: "Bordô",
-      description: "A melhor experiência",
+      description: "Internet de sobra para toda a família",
       features: [
-        "Assistir em 4 dispositivos simultaneamente",
-        "Downloads em 6 telefones ou tablets",
-        "Qualidade Ultra HD 4K + HDR",
-        "Filmes e séries ilimitados",
-        "Cancelar quando quiser",
-        "Sem anúncios",
-        "Áudio espacial disponível",
+        "Mão de obra especializada",
+        "Roteador Wi-fi última geração",
+        "Roteador ou Câmera Monitoramento Adicional",
+        "Gerenciamento da rede interna (SGRI)",
+        "Suporte Premium 24/7 ",
+        "1000 Mega",
+      ],
+      benefits: [
+        { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
+        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: " 4 Livros Digital Mensal + 2 AudioBook" },
+        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
+      ], benefitsAdd: [
+        { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
+        { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
       ],
       variant: "bordo" as const,
     },
     {
       title: "Plano",
       title2: "Neon Gamer",
-      description: "A melhor experiência",
+      description: "A conexão ideal para quem leva o game a sério",
       features: [
-        "Assistir em 4 dispositivos simultaneamente",
-        "Downloads em 6 telefones ou tablets",
-        "Qualidade Ultra HD 4K + HDR",
-        "Filmes e séries ilimitados",
-        "Cancelar quando quiser",
-        "Sem anúncios",
-        "Áudio espacial disponível",
+        "Mão de obra especializada",
+        "Roteador Wi-fi última geração",
+        "Roteador ou Câmera Monitoramento Adicional",
+        "Gerenciamento da rede interna (SGRI)",
+        "Suporte Premium 24/7 ",
+        "1000 Mega",
+      ], benefitsAdd: [
+        { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
+        { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
+      ],
+      benefits: [
+        { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
+        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: " 4 Livros Digital Mensal + 2 AudioBook" },
+        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
       ],
       variant: "neon" as const,
     },
     {
       title: "Plano",
       title2: "Neon Gamer",
-      description: "A melhor experiência",
+      description: "A conexão ideal para quem leva o game a sério",
       features: [
-        "Assistir em 4 dispositivos simultaneamente",
-        "Downloads em 6 telefones ou tablets",
-        "Qualidade Ultra HD 4K + HDR",
-        "Filmes e séries ilimitados",
-        "Cancelar quando quiser",
-        "Sem anúncios",
-        "Áudio espacial disponível",
+        "Mão de obra especializada",
+        "Roteador Wi-fi última geração",
+        "Roteador ou Câmera Monitoramento Adicional",
+        "Gerenciamento da rede interna (SGRI)",
+        "Suporte Premium 24/7 ",
+        "1000 Mega",
+      ],
+      benefits: [
+        { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
+        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 2 AudioBook" },
+        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
+      ], benefitsAdd: [
+        { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
+        { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
       ],
       variant: "neon2" as const,
+    },
+    {
+      title: "Plano",
+      title2: "Dourado Business",
+      description: "Potência e performance para todos os seus dispositivos",
+      features: [
+        "Mão de obra especializada",
+        "Roteador Wi-fi última geração",
+        "Roteador ou Câmera Monitoramento Adicional",
+        "Gerenciamento da rede interna (SGRI)",
+        "Suporte Premium 24/7 ",
+        "1000 Mega",
+      ],
+      benefits: [
+        { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
+        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 2 AudioBook" },
+        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
+      ], benefitsAdd: [
+        { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
+        { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
+      ],
+      variant: "dourado" as const,
     },
   ];
 
@@ -130,18 +198,26 @@ export function PricingSection() {
       <section className="py-24 px-4 bg-gradient-to-b from-[#a3cef1]/60 via-white/70 to-[#a3cef1]/60 relative z-10">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-16">
-              Conheça nossos planos
-            </h2>
+            <h1 className="text-4xl font-bold text-primary mb-16">
+              <strong>Conheça nossos planos</strong>
+            </h1>
           </div>
 
           <div className="relative">
-            <button
-              onClick={() => scroll("left")}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-background/80 p-1 rounded-full shadow-md hover:bg-background z-10"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
+            <div className="absolute -top-12 -right-8 flex space-x-3 z-10">
+              <button
+                onClick={() => scroll("left")}
+                className="bg-background/80 p-1 rounded-full shadow-md hover:bg-background"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                className="bg-background/80 p-1 rounded-full shadow-md hover:bg-background"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
 
             <div
               ref={scrollRef}
@@ -159,12 +235,12 @@ export function PricingSection() {
               ))}
             </div>
 
-            <button
+            {/* <button
               onClick={() => scroll("right")}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-background/80 p-1 rounded-full shadow-md hover:bg-background z-10"
+              className="absolute -right-12 top-1/2 -translate-y-1/2 bg-background/80 p-1 rounded-full shadow-md hover:bg-background z-10"
             >
               <ChevronRight className="w-6 h-6" />
-            </button>
+            </button> */}
           </div>
 
           <div className="text-center mt-12">
