@@ -21,10 +21,10 @@ const IndiqueGanhe = () => {
                     alt="Decorativa"
                     className="w-60 md:w-96"
                 />
-                <h1 className="text-white text-7xl md:text-6xl font-bold text-center -mt-16 md:-mt-10 leading-tight">
-                    Indique <br />
-                    <span className="text-4xl md:text-2xl relative -top-10 md:-top-4">&</span>
-                    <span className="relative -top-6 md:-top-4">Ganhe</span>
+                <h1 className="text-white text-7xl md:text-6xl font-bold text-center -mt-16 md:-mt-2 leading-tight">
+                    <strong>Indique <br />
+                        <span className="text-4xl md:text-2xl relative -top-10 md:-top-4">&</span>
+                        <span className="relative -top-6 md:-top-4">Ganhe</span></strong>
                 </h1>
 
 

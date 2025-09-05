@@ -3,45 +3,52 @@ import { SiWhatsapp } from "react-icons/si";
 import LogoFundo from "@/assets/pnet-transparente.png";
 import CllParanhanaClube from "@/assets/CllParnhanaClube.png";
 import LogoParanhanaClube from "@/assets/LogoParanhanaClube.png";
+import { FaApple, FaGooglePlay } from 'react-icons/fa';
+
 const ParanhanaClube = () => {
   return (
     <section className="min-h-screen bg-gradient-purple relative overflow-hidden flex items-center justify-center px-4 py-16">
       <div className="absolute top-20 left-1/2 transform -translate-x-1/2">
-        <img src={LogoParanhanaClube} alt="ParanhanaNet" className="w-56 lg:w-68" />
+        <img src={LogoParanhanaClube} alt="ParanhanaNet" className="w-60 lg:w-68" />
       </div>
 
       <img
         src={LogoFundo}
         alt="Logo de fundo"
         className="absolute inset-0 w-full object-cover opacity-100"
-        style={{ height: '85%', zIndex: 0 }}
+        style={{ height: '90%', zIndex: 0 }}
       />
 
       <div className="relative z-10 flex flex-col items-center">
         <img
           src={CllParanhanaClube}
           alt="Decorativa"
-          className="w-60 md:w-96 relative left-[-20%]"
+          className="w-64 md:w-96 relative -top-4 md:-top-16 right-20"
         />
-        <h1 className="text-white text-4xl md:text-6xl font-bold text-end md:-mt-0 mb-10 leading-tight relative right-[-20%]">
+        <h1 className="text-white text-5xl md:text-6xl font-semibold text-end -mb-24 md:mb-6 leading-tight relative -top-36 left-14">
           Vantagens <br />
-          <span className=" -top-6 md:-top-4 text-5xl md:text-6xl">Exclusivas</span>
+          <span className="text-6xl md:text-6xl font-bold">Exclusivas</span>
         </h1>
 
-        <p className="text-white text-center mb-10">
-          Até 50% de descontos em lojas online e estabelecimento da região.
+        <p className="text-white text-initial mb-5 text-xl px-8">
+          Até <strong>50% de descontos</strong> em <strong>lojas online</strong> e <strong>estabelecimentos</strong> da região
         </p>
 
-        <Button
-          size="lg"
-          className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-full mt-6 flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300"
-        >
-          <SiWhatsapp className="w-6 h-6" />
-          Mais informações
-        </Button>
+        <div className="relative bottom-4 left-1/2 transform -translate-x-1/2 flex items-center space-x-8 mt-16">
+          <span className="text-white text-sm font-semibold whitespace-nowrap">Baixe o APP</span>
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2">
+              <FaGooglePlay className="w-10 h-4 text-white" />
+              <span className="text-white text-xs">Disponível na Google Play</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaApple className="w-10 h-10 text-white" />
+              <span className="text-white text-xs">Disponível na App Store</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
   );
 };
 

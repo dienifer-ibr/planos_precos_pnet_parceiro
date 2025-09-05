@@ -25,10 +25,10 @@ const ParanhanaPlay: React.FC = () => {
                 <img
                     src={LogoParanhana_Play}
                     alt="Logo Paranhana Play"
-                    className="absolute top-[-45px] left-[38%] transform -translate-x-1/2 w-3/4 max-w-xs"
+                    className="absolute top-[-50px] left-[38%] transform -translate-x-1/2 w-3/4 max-w-xs"
                 />
 
-                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-3xl mt-20">
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-3xl mt-10">
                     +2000 filmes, +150 canais de TV grátis e streaming on-demand em qualquer lugar.
                 </p>
             </div>

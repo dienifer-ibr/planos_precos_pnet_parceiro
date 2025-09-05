@@ -21,14 +21,16 @@ const ParanhanaRevistas: React.FC = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2">
                     <img
                         src={CelularRevistas}
-                        alt="Filmes e pipocas"
-                        className="h-auto object-center w-60 lg:w-68"
+                        alt="Celular Revistas"
+                        className="h-auto object-center w-80 lg:w-68"
                     />
-                    <p className="absolute bottom-[-70px] left-1/2 transform -translate-x-1/2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-full px-4 md:px-6">
-                        Plataforma digital completa, com diversas opções de revistas para você acessar quando e onde quiser                    </p>
+                </div>
+                <div className="mt-[400px] w-[90%] max-w-4xl px-4 md:px-6 text-center">
+                    <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold">
+                        Plataforma digital completa, com diversas opções de revistas para você acessar quando e onde quiser.
+                    </p>
                 </div>
             </div>
-
         </section>
     );
 };

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SiWhatsapp } from "react-icons/si";
+import { FaPlus } from 'react-icons/fa';
 
 interface Benefit {
   icon: string;
@@ -24,7 +25,7 @@ interface PlanCardProps {
   popular?: boolean;
   benefits: Benefit[];
   benefitsAdd?: benefitsAdd[];
-  variant: "laranja" | "marron" | "marfim" | "bordo" | "neon" | "neon2" | "dourado";
+  variant: "laranja" | "marron" | "marfim" | "bordo" | "neon" | "neonn" | "dourado";
 }
 
 export function PlanCard({
@@ -47,6 +48,7 @@ export function PlanCard({
           title: "text-orange-600",
           button: "bg-orange-500 hover:bg-orange-600 text-white",
           color: "text-orange-600",
+          iconAdd: "bg-orange-500 text-white",
         };
       case "marron":
         return {
@@ -56,6 +58,7 @@ export function PlanCard({
           title: "text-amber-900",
           button: "bg-amber-900 hover:bg-amber-950 text-white",
           color: "text-amber-900",
+          iconAdd: "bg-amber-900 text-white",
         };
       case "marfim":
         return {
@@ -65,6 +68,7 @@ export function PlanCard({
           title: "text-orange-400",
           button: "bg-orange-300 hover:bg-orange-400 text-white",
           color: "text-orange-400",
+          iconAdd: "bg-orange-300 text-white",
         };
       case "bordo":
         return {
@@ -74,6 +78,7 @@ export function PlanCard({
           title: "text-red-900",
           button: "bg-red-900 hover:bg-red-800 text-white",
           color: "text-red-900",
+          iconAdd: "bg-red-900 text-white",
         };
       case "neon":
         return {
@@ -83,15 +88,17 @@ export function PlanCard({
           title: "text-purple-600",
           button: "bg-purple-600 hover:bg-purple-700 text-white",
           color: "text-purple-600",
+          iconAdd: "bg-purple-600 text-white",
         };
-      case "neon2":
+      case "neonn":
         return {
           card: "border-steel/20 bg-gradient-to-br from-card to-steel/5 hover:shadow-glow",
           badge: "bg-green-600 text-white",
           blockBg: "bg-green-600 text-white",
           title: "text-green-600",
           button: "bg-green-600 hover:bg-green-700 text-white",
-          color: "text-green-600",
+          color: "text-green-900",
+          iconAdd: "bg-green-600 text-white",
         };
       case "dourado":
         return {
@@ -101,6 +108,7 @@ export function PlanCard({
           title: "text-yellow-600",
           button: "bg-yellow-600 hover:bg-yellow-700 text-white",
           color: "text-yellow-600",
+          iconAdd: "bg-yellow-600 text-white",
         };
     }
   };
@@ -128,12 +136,12 @@ export function PlanCard({
           {description}
         </CardDescription>
 
-        <p className={`text-center text-xs sm:text-sm md:text-base text-muted-foreground ${variantClasses.color} -mb-2`}>
+        <p className={`text-center text-sm sm:text-sm md:text-base text-muted-foreground ${variantClasses.color}`}>
           Incluso no combo:
         </p>
 
         <div className="pt-4">
-          <div className={`grid grid-cols-2 gap-4 sm:gap-6 p-4 sm:p-6 rounded-2xl text-center ${variantClasses.blockBg}`}>
+          <div className={`grid grid-cols-2 gap-4 sm:gap-6 p-4 sm:p-6 rounded-2xl text-center -mb-6 ${variantClasses.blockBg}`}>
             {benefits.map((b, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img
@@ -165,10 +173,17 @@ export function PlanCard({
           </div>
 
         </div>
+
       </CardHeader>
 
-      <CardContent className="space-y-4">
-        <ul className="space-y-2 sm:space-y-3">
+      <CardContent className="space-y-1">
+        <div className="flex justify-center">
+          <button className={`p-2 rounded-full ${variantClasses.iconAdd}`}>
+            <FaPlus size={8} />
+          </button>
+        </div>
+
+        <ul className="space-y-1 sm:space-y-2">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center gap-2 sm:gap-3">
               <Check className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
@@ -179,7 +194,7 @@ export function PlanCard({
           ))}
         </ul>
 
-        <Button className={`w-full mt-6 text-xs sm:text-sm md:text-base py-2 sm:py-3 ${variantClasses.button}`}>
+        <Button className={`w-full mt-4 text-xs sm:text-sm md:text-base py-2 sm:py-3 ${variantClasses.button}`}>
           <SiWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           Contrate Já
         </Button>

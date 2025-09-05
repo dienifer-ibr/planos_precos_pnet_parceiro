@@ -24,8 +24,8 @@ const Index = () => {
         <ParanhanaClube />
         <ParanhanaPlay />
         <Watch />
-        <ParanhanaLivros />
         <ParanhanaRevistas />
+        <ParanhanaLivros />
         <IndiqueGanhe />
         <Depoimentos />
         <FAQSection />

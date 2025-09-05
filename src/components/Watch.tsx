@@ -1,7 +1,8 @@
 import React from "react";
 import ControleWatch from "@/assets/controle-watch.png";
 import FilmesPipocas from "@/assets/filmes-pipocas.png";
-
+import LogoWatch from "@/assets/logoWatch2.png";
+import LogoParamount from "@/assets/logoParamount.png";
 const Watch: React.FC = () => {
     return (
         <section
@@ -10,24 +11,23 @@ const Watch: React.FC = () => {
                 backgroundImage: `url(${ControleWatch})`,
             }}
         >
-            {/* Overlay azul */}
             <div className="absolute inset-0 bg-blue-500 bg-opacity-80"></div>
 
-            {/* Conteúdo */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4 py-8 gap-6">
-                <div className="max-w-xl w-full relative left-[-20%] top-40">
-                    <p className="text-lg md:text-xl mb-0">
-                        STREAMING BY
-                    </p>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-0">
-                        WATCHᴮᴿ
-                    </h2>
+                <div className="max-w-xl w-full relative left-[-20%] top-48">
+                    <img
+                        src={LogoWatch}
+                        alt="Logo Watch"
+                        className="relative top-4 left-[50%] transform -translate-x-1/2 w-2/4 max-w-xs"
+                    />
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tightmb-0 ">
                         +
                     </h2>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-0">
-                        Paramount
-                    </h2>
+                    <img
+                        src={LogoParamount}
+                        alt="Logo Paramount"
+                        className="relative -top-4 left-[50%] transform -translate-x-1/2 w-2/4 max-w-xs"
+                    />
                 </div>
 
                 <div className="w-full max-w-3xl relative">

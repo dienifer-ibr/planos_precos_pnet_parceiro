@@ -136,7 +136,7 @@ export function PricingSection() {
         { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
         { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
       ],
-      variant: "neon2" as const,
+      variant: "neonn" as const,
     },
     {
       title: "Plano",
@@ -235,12 +235,6 @@ export function PricingSection() {
               ))}
             </div>
 
-            {/* <button
-              onClick={() => scroll("right")}
-              className="absolute -right-12 top-1/2 -translate-y-1/2 bg-background/80 p-1 rounded-full shadow-md hover:bg-background z-10"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button> */}
           </div>
 
           <div className="text-center mt-12">
