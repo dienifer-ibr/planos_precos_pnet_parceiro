@@ -32,7 +32,7 @@ const HeroSection = () => {
               <img
                 src={premio}
                 alt="prêmio"
-                className="w-68 mb-12"
+                className="w-68 mb-12 lg:w-72"
               />
               <h2>
                 <strong>A MAIS VELOZ DO VALE DO PARANHANA</strong>

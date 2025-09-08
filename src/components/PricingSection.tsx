@@ -103,29 +103,6 @@ export function PricingSection() {
         "Gerenciamento da rede interna (SGRI)",
         "Suporte Premium 24/7 ",
         "1000 Mega",
-      ], benefitsAdd: [
-        { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
-        { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
-      ],
-      benefits: [
-        { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
-        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
-        { icon: iconLivros, title: "PARANHANALIVROS", desc: " 4 Livros Digital Mensal + 2 AudioBook" },
-        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
-      ],
-      variant: "neon" as const,
-    },
-    {
-      title: "Plano",
-      title2: "Neon Gamer",
-      description: "A conexão ideal para quem leva o game a sério",
-      features: [
-        "Mão de obra especializada",
-        "Roteador Wi-fi última geração",
-        "Roteador ou Câmera Monitoramento Adicional",
-        "Gerenciamento da rede interna (SGRI)",
-        "Suporte Premium 24/7 ",
-        "1000 Mega",
       ],
       benefits: [
         { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
@@ -136,7 +113,7 @@ export function PricingSection() {
         { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
         { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
       ],
-      variant: "neonn" as const,
+      variant: "neon" as const,
     },
     {
       title: "Plano",

@@ -6,7 +6,7 @@ import Paranhana_Play from "@/assets/ParanhanaPlay.png";
 const ParanhanaPlay: React.FC = () => {
     return (
         <section
-            className="relative w-full h-screen bg-cover bg-center flex flex-col items-center justify-center"
+            className="relative w-full h-screen bg-cover bg-center flex flex-col items-center justify-center lg:bg-contain"
             style={{
                 backgroundImage: `url(${ParanhanaPlay_Fundo})`,
             }}
@@ -19,13 +19,13 @@ const ParanhanaPlay: React.FC = () => {
                 <img
                     src={Paranhana_Play}
                     alt="Filmes e pipocas"
-                    className="w-full h-auto"
+                    className="w-full h-auto lg:w-96"
                 />
 
                 <img
                     src={LogoParanhana_Play}
                     alt="Logo Paranhana Play"
-                    className="absolute top-[-50px] left-[38%] transform -translate-x-1/2 w-3/4 max-w-xs"
+                    className="absolute top-[-50px] left-[38%] transform -translate-x-1/2 w-3/4 max-w-xs lg:w-96 lg:-top-48"
                 />
 
                 <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-3xl mt-10">

@@ -23,6 +23,7 @@ interface ReviewData {
   location: string;
 }
 
+// ----------------- Dados -----------------
 const videosData: VideoData[] = [
   {
     id: "v1",
@@ -110,7 +111,7 @@ const reviewsData: ReviewData[] = [
     location: "Gramado, RS",
   },
   {
-    id: "6",
+    id: "r6",
     name: "Pedro Henrique",
     avatar:
       "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
@@ -121,6 +122,7 @@ const reviewsData: ReviewData[] = [
   },
 ];
 
+// ----------------- Componente -----------------
 const ReviewsShowcase = () => {
   const [videoIndex, setVideoIndex] = useState(0);
   const [reviewIndex, setReviewIndex] = useState(0);
@@ -128,7 +130,18 @@ const ReviewsShowcase = () => {
   const [isHoveringVideo, setIsHoveringVideo] = useState(false);
   const [isHoveringReview, setIsHoveringReview] = useState(false);
 
-  const itemsPerView = 2;
+  // ----------- Responsividade desktop -----------
+  const [itemsPerView, setItemsPerView] = useState(2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setItemsPerView(window.innerWidth >= 1024 ? 3 : 2);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const videoMaxIndex = Math.max(0, videosData.length - itemsPerView);
   const reviewMaxIndex = Math.max(0, reviewsData.length - itemsPerView);
 
@@ -161,10 +174,12 @@ const ReviewsShowcase = () => {
   return (
     <section className="relative py-16 min-h-screen bg-gradient-to-b from-white to-pink-400">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
+        {/* Título + Navegação Vídeos */}
         <div className="mb-16 flex flex-col">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-primary">O que dizem nossos clientes?</h2>
+            <h2 className="text-3xl font-bold text-primary">
+              O que dizem nossos clientes?
+            </h2>
             <div className="flex gap-2">
               <Button variant="outline" size="icon" onClick={goToPreviousVideo}>
                 <ChevronLeft className="h-5 w-5" />
@@ -175,16 +190,17 @@ const ReviewsShowcase = () => {
             </div>
           </div>
 
+          {/* Carrossel Vídeos */}
           <div
-            className="relative overflow-hidden flex items-center h-80 md:h-96"
+            className="relative overflow-hidden flex items-center h-64 md:h-80 lg:h-96"
             onMouseEnter={() => setIsHoveringVideo(true)}
             onMouseLeave={() => setIsHoveringVideo(false)}
           >
             <div
-              className="flex transition-transform duration-500 ease-out gap-6"
+              className="flex transition-transform duration-500 ease-out gap-4 lg:gap-6"
               style={{
-                transform: `translateX(-${videoIndex * 50}%)`,
-                width: `${(videosData.length / itemsPerView) * 60}%`,
+                transform: `translateX(-${videoIndex * (100 / itemsPerView)}%)`,
+                width: `${(videosData.length / itemsPerView) * 100}%`,
               }}
             >
               {videosData.map((video) => (
@@ -196,8 +212,12 @@ const ReviewsShowcase = () => {
                   onMouseLeave={() => setHoveredItem(null)}
                   onClick={() => openVideo(video.youtubeId)}
                 >
-                  <div className="relative aspect-video overflow-hidden">
-                    <img src={video.thumbnail} alt={video.title} className="w-full h-full object-cover" />
+                  <div className="relative aspect-video overflow-hidden lg:rounded-xl">
+                    <img
+                      src={video.thumbnail}
+                      alt={video.title}
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute bottom-3 right-3 bg-black/80 text-white text-sm px-3 py-1 rounded-full font-medium">
                       {video.duration}
                     </div>
@@ -210,8 +230,8 @@ const ReviewsShowcase = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-base">{video.title}</h3>
+                  <div className="p-3 lg:p-4">
+                    <h3 className="font-bold text-base lg:text-lg">{video.title}</h3>
                     <p className="text-sm text-muted-foreground">{video.channelName}</p>
                   </div>
                 </Card>
@@ -220,31 +240,37 @@ const ReviewsShowcase = () => {
           </div>
         </div>
 
-        <div className="flex items-center h-80 md:h-96">
+        {/* Carrossel Reviews */}
+        <div className="flex items-center h-64 md:h-80 lg:h-96">
           <div
             className="relative overflow-hidden w-full"
             onMouseEnter={() => setIsHoveringReview(true)}
             onMouseLeave={() => setIsHoveringReview(false)}
           >
             <div
-              className="flex transition-transform duration-500 ease-out gap-6"
+              className="flex transition-transform duration-500 ease-out gap-4"
               style={{
-                transform: `translateX(-${reviewIndex * 50}%)`,
-                width: `${(reviewsData.length / itemsPerView) * 45}%`,
+                transform: `translateX(-${reviewIndex * (100 / itemsPerView)}%)`,
+                width: `${(reviewsData.length / itemsPerView) * 100}%`,
               }}
             >
               {reviewsData.map((review) => (
                 <Card
                   key={review.id}
-                  className="group relative flex-shrink-0 hover:scale-[1.02] transition-all duration-300 p-4"
-                  style={{ width: `${100 / itemsPerView}%` }}
+                  className="group relative flex-shrink-0 hover:scale-[1.02] transition-all duration-300 p-3"
+                  style={{
+                    width: window.innerWidth >= 1024 ? "300px" : `${100 / itemsPerView}%`}}
                   onMouseEnter={() => setHoveredItem(review.id)}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <img src={review.avatar} alt={review.name} className="w-12 h-12 rounded-full object-cover" />
+                    <img
+                      src={review.avatar}
+                      alt={review.name}
+                      className="w-12 h-12 rounded-full object-cover lg:w-16 lg:h-16"
+                    />
                     <div>
-                      <h3 className="font-bold">{review.name}</h3>
+                      <h3 className="font-bold lg:text-lg">{review.name}</h3>
                       <p className="text-sm text-muted-foreground">{review.location}</p>
                     </div>
                   </div>
@@ -253,13 +279,16 @@ const ReviewsShowcase = () => {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-5 w-5 ${i < review.rating ? "text-yellow-400 fill-yellow-400" : "text-muted-foreground"}`}
+                          className={`h-5 w-5 ${i < review.rating
+                            ? "text-yellow-400 fill-yellow-400"
+                            : "text-muted-foreground"
+                            } lg:h-6 lg:w-6`}
                         />
                       ))}
                     </div>
                     <span className="text-sm text-muted-foreground">{review.date}</span>
                   </div>
-                  <p className="text-sm">{review.comment}</p>
+                  <p className="text-sm lg:text-base">{review.comment}</p>
                 </Card>
               ))}
             </div>

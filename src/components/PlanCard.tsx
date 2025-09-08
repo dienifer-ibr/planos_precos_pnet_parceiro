@@ -25,7 +25,7 @@ interface PlanCardProps {
   popular?: boolean;
   benefits: Benefit[];
   benefitsAdd?: benefitsAdd[];
-  variant: "laranja" | "marron" | "marfim" | "bordo" | "neon" | "neonn" | "dourado";
+  variant: "laranja" | "marron" | "marfim" | "bordo" | "neon" | "dourado";
 }
 
 export function PlanCard({
@@ -89,16 +89,6 @@ export function PlanCard({
           button: "bg-purple-600 hover:bg-purple-700 text-white",
           color: "text-purple-600",
           iconAdd: "bg-purple-600 text-white",
-        };
-      case "neonn":
-        return {
-          card: "border-steel/20 bg-gradient-to-br from-card to-steel/5 hover:shadow-glow",
-          badge: "bg-green-600 text-white",
-          blockBg: "bg-green-600 text-white",
-          title: "text-green-600",
-          button: "bg-green-600 hover:bg-green-700 text-white",
-          color: "text-green-900",
-          iconAdd: "bg-green-600 text-white",
         };
       case "dourado":
         return {

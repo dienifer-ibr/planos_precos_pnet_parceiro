@@ -143,3 +143,9 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@screen lg {
+  .text-shadow-blue {
+    text-shadow: 30px 20px 20px rgba(0, 123, 255, 0.7);
+  }
+}

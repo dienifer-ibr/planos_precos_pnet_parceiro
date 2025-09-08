@@ -14,7 +14,7 @@ const ParanhanaLivros: React.FC = () => {
             <div className="absolute inset-0 bg-blue-400 bg-opacity-90"></div>
 
             <div className="absolute top-40 left-1/3 transform -translate-x-1/4">
-                <img src={LogoParanhanaLivros} alt="ParanhanaNet" className="w-96 lg:w-96" />
+                <img src={LogoParanhanaLivros} alt="ParanhanaNet" className="w-96 lg:w-96 lg:relative lg:-left-48" />
             </div>
 
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
@@ -22,11 +22,11 @@ const ParanhanaLivros: React.FC = () => {
                     <img
                         src={CelularLivros}
                         alt="Celular Livros"
-                        className="h-auto object-center w-80 lg:w-68"
+                        className="h-auto object-center w-80 lg:w-96 lg:relative lg:-right-96"
                     />
                 </div>
-                <div className="mt-[400px] w-[90%] max-w-4xl px-4 md:px-6 text-center">
-                    <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold">
+                <div className="mt-[400px] w-[90%] max-w-4xl px-4 md:px-6 text-center lg:relative lg:-left-60 lg:-top-60 lg:max-w-3xl">
+                    <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl font-semibold">
                         Plataforma digital completa, com diversas opções de livros do o mês, para você acessar quando e onde quiser
                     </p>
                 </div>
