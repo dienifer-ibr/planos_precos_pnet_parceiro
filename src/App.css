@@ -46,6 +46,6 @@
 
 @media (min-width: 1024px) {
   body {
-    transform: scale(0.7);
+    transform: scale(0.7) !important;
   }
 }
