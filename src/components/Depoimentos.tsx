@@ -119,17 +119,74 @@ const reviewsData: ReviewData[] = [
     date: "2025-08-13",
     location: "Bento Gonçalves, RS",
   },
+  {
+    id: "r7",
+    name: "Pedro Henrique",
+    avatar:
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
+    rating: 5,
+    comment: "Excelente atendimento e velocidade de internet incrível!",
+    date: "2025-08-13",
+    location: "Bento Gonçalves, RS",
+  },
+  {
+    id: "r8",
+    name: "Pedro Henrique",
+    avatar:
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
+    rating: 5,
+    comment: "Excelente atendimento e velocidade de internet incrível!",
+    date: "2025-08-13",
+    location: "Bento Gonçalves, RS",
+  },
+  {
+    id: "r9",
+    name: "Pedro Henrique",
+    avatar:
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
+    rating: 5,
+    comment: "Excelente atendimento e velocidade de internet incrível!",
+    date: "2025-08-13",
+    location: "Bento Gonçalves, RS",
+  },
+  {
+    id: "r10",
+    name: "Pedro Henrique",
+    avatar:
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
+    rating: 5,
+    comment: "Excelente atendimento e velocidade de internet incrível!",
+    date: "2025-08-13",
+    location: "Bento Gonçalves, RS",
+  },
+  {
+    id: "r11",
+    name: "Pedro Henrique",
+    avatar:
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
+    rating: 5,
+    comment: "Excelente atendimento e velocidade de internet incrível!",
+    date: "2025-08-13",
+    location: "Bento Gonçalves, RS",
+  },
+  {
+    id: "r12",
+    name: "Pedro Henrique",
+    avatar:
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
+    rating: 5,
+    comment: "Excelente atendimento e velocidade de internet incrível!",
+    date: "2025-08-13",
+    location: "Bento Gonçalves, RS",
+  }
 ];
 
-// ----------------- Componente -----------------
 const ReviewsShowcase = () => {
   const [videoIndex, setVideoIndex] = useState(0);
   const [reviewIndex, setReviewIndex] = useState(0);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [isHoveringVideo, setIsHoveringVideo] = useState(false);
   const [isHoveringReview, setIsHoveringReview] = useState(false);
-
-  // ----------- Responsividade desktop -----------
   const [itemsPerView, setItemsPerView] = useState(2);
 
   useEffect(() => {
@@ -148,32 +205,33 @@ const ReviewsShowcase = () => {
     setVideoIndex((prev) => (prev >= videoMaxIndex ? 0 : prev + 1));
   const goToPreviousVideo = () =>
     setVideoIndex((prev) => (prev <= 0 ? videoMaxIndex : prev - 1));
-
   const goToNextReview = () =>
     setReviewIndex((prev) => (prev >= reviewMaxIndex ? 0 : prev + 1));
   const goToPreviousReview = () =>
     setReviewIndex((prev) => (prev <= 0 ? reviewMaxIndex : prev - 1));
-
   const openVideo = (youtubeId: string) => {
     window.open(`https://www.youtube.com/watch?v=${youtubeId}`, "_blank");
   };
 
   useEffect(() => {
     if (isHoveringVideo) return;
-    const interval = setInterval(goToNextVideo, 4000);
+    const interval = setInterval(() => {
+      setVideoIndex((prev) => (prev >= videoMaxIndex ? 0 : prev + 1));
+    }, 4000);
     return () => clearInterval(interval);
-  }, [videoIndex, isHoveringVideo]);
+  }, [isHoveringVideo, videoMaxIndex]);
 
   useEffect(() => {
     if (isHoveringReview) return;
-    const interval = setInterval(goToNextReview, 4000);
+    const interval = setInterval(() => {
+      setReviewIndex((prev) => (prev >= reviewMaxIndex ? 0 : prev + 1));
+    }, 4000);
     return () => clearInterval(interval);
-  }, [reviewIndex, isHoveringReview]);
+  }, [isHoveringReview, reviewMaxIndex]);
 
   return (
     <section className="relative py-16 min-h-screen bg-gradient-to-b from-white to-pink-400">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Título + Navegação Vídeos */}
         <div className="mb-16 flex flex-col">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-primary">
@@ -189,7 +247,6 @@ const ReviewsShowcase = () => {
             </div>
           </div>
 
-          {/* Carrossel Vídeos */}
           <div
             className="relative overflow-hidden flex items-center h-64 md:h-80 lg:h-96"
             onMouseEnter={() => setIsHoveringVideo(true)}
@@ -239,7 +296,6 @@ const ReviewsShowcase = () => {
           </div>
         </div>
 
-        {/* Carrossel Reviews */}
         <div className="flex items-center h-64 md:h-80 lg:h-96">
           <div
             className="relative overflow-hidden w-full"
@@ -256,9 +312,11 @@ const ReviewsShowcase = () => {
               {reviewsData.map((review) => (
                 <Card
                   key={review.id}
-                  className="group relative flex-shrink-0 hover:scale-[1.02] transition-all duration-300 p-3"
+                  className="group relative flex-shrink-0 hover:scale-[1.02] transition-all duration-300 p-2"
                   style={{
-                    width: window.innerWidth >= 1024 ? "300px" : `${100 / itemsPerView}%`}}
+                    width:
+                      window.innerWidth >= 1024 ? "260px" : `${100 / itemsPerView}%`,
+                  }}
                   onMouseEnter={() => setHoveredItem(review.id)}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
@@ -279,8 +337,8 @@ const ReviewsShowcase = () => {
                         <Star
                           key={i}
                           className={`h-5 w-5 ${i < review.rating
-                            ? "text-yellow-400 fill-yellow-400"
-                            : "text-muted-foreground"
+                              ? "text-yellow-400 fill-yellow-400"
+                              : "text-muted-foreground"
                             } lg:h-6 lg:w-6`}
                         />
                       ))}

@@ -53,6 +53,12 @@ const faqData: FAQCategory[] = [
         answer:
           "Para tornar tudo mais prático para você, ligue para 3543-1099 ou visite uma de nossas lojas:Parobé- R. Odorico Mosmann, 441- Sala 02- Centro, Parobé- RS, 95630-000 (Ao lado do Posto Ipiranga) / Taquara- R. Júlio de Castilhos, 2177- Sala 3- Centro, Taquara- RS, 95600-030 (Em frente ao Colégio Santa Terezinha) / Igrejinha- Av. Pres. Castelo Branco, 493- Centro, Igrejinha- RS, 95650-000 (Em frente ao Banco do Brasil) - Você também pode contatar-nos pelo nosso WhatsApp 3543-1099.",
       },
+      {
+        id: "subscriber-6",
+        question: "A INSTALAÇÃO DA PARANHANANET É GRATUITA?",
+        answer:
+          "Sim, a instalação da ParanhanaNet é gratuita com qualquer plano que você escolher. Queremos que você aproveite nossa internet rápida e estável sem custos extras.",
+      },
     ],
   },
 ];
