@@ -14,7 +14,7 @@ const ParanhanaLivros: React.FC = () => {
             <div className="absolute inset-0 bg-blue-400 bg-opacity-90"></div>
 
             <div className="absolute top-40 left-1/3 transform -translate-x-1/4">
-                <img src={LogoParanhanaLivros} alt="ParanhanaNet" className="w-96 lg:w-96 lg:relative lg:-left-48" />
+                <img src={LogoParanhanaLivros} alt="ParanhanaNet" className="w-96 lg:w-96 lg:relative lg:-left-48 lg:bottom-16" />
             </div>
 
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">

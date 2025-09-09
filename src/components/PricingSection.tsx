@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PlanCard } from "@/components/PlanCard";
 import iconPlay from "@/assets/icon-pplay.png";
@@ -7,6 +7,8 @@ import iconLivros from "@/assets/icons-plivros.png";
 import iconRevistas from "@/assets/icon-previstas.png";
 import iconWatch from "@/assets/logoWatch.png";
 import iconParamount from "@/assets/logoParamount.png";
+import { FaMicrophone, FaWifi, FaWrench, FaHeadset, FaTachometerAlt, FaVideo } from "react-icons/fa";
+
 export function PricingSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -16,11 +18,11 @@ export function PricingSection() {
       title2: "Laranja",
       description: "Internet estável para o dia a dia, sem travar",
       features: [
-        "Mão de obra especializada",
-        "Roteador Wi-fi última geração",
-        "Gerenciamento da rede interna (SGRI)",
-        "Suporte Premium 24/7",
-        "600 Mega",
+        { icon: FaMicrophone, desc: "Mão de obra especializada" },
+        { icon: FaWifi, desc: "Roteador Wi-fi última geração" },
+        { icon: FaWrench, desc: "Gerenciamento da rede interna (SGRI)" },
+        { icon: FaHeadset, desc: "Suporte Premium 24/7" },
+        { icon: FaTachometerAlt, desc: "600 Mega" },
       ],
       benefits: [
         { icon: iconPlay, title: "PARANHANAPLAY", desc: "3 Acessos Simultâneos" },
@@ -35,17 +37,17 @@ export function PricingSection() {
       title2: "Marron",
       description: "Conectividade de alto nível para todos os seus dispositivos",
       features: [
-        "Mão de obra especializada",
-        "Roteador Wi-fi última geração",
-        "Câmera Monitoramento Adicional",
-        "Gerenciamento da rede interna (SGRI)",
-        "Suporte Premium 24/7 ",
-        "700 Mega",
+        { icon: FaMicrophone, desc: "Mão de obra especializada" },
+        { icon: FaWifi, desc: "Roteador Wi-fi última geração" },
+        { icon: FaVideo, desc: "Câmera Monitoramento Adicional" },
+        { icon: FaWrench, desc: "Gerenciamento da rede interna (SGRI)" },
+        { icon: FaHeadset, desc: "Suporte Premium 24/7" },
+        { icon: FaTachometerAlt, desc: "700 Mega" },
       ],
       benefits: [
         { icon: iconPlay, title: "PARANHANAPLAY", desc: "4 Acessos Simultâneos" },
         { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
-        { icon: iconLivros, title: "PARANHANALIVROS", desc: " 4 Livros Digital Mensal + 1 AudioBook" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 1 AudioBook" },
         { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
       ],
       variant: "marron" as const,
@@ -55,16 +57,16 @@ export function PricingSection() {
       title2: "Marfim",
       description: "Potência e performance para todos os seus dispositivos",
       features: [
-        "Mão de obra especializada",
-        "Roteador Wi-fi última geração",
-        "Gerenciamento da rede interna (SGRI)",
-        "Suporte Premium 24/7",
-        "800 Mega",
+        { icon: FaMicrophone, desc: "Mão de obra especializada" },
+        { icon: FaWifi, desc: "Roteador Wi-fi última geração" },
+        { icon: FaWrench, desc: "Gerenciamento da rede interna (SGRI)" },
+        { icon: FaHeadset, desc: "Suporte Premium 24/7" },
+        { icon: FaTachometerAlt, desc: "800 Mega" },
       ],
       benefits: [
         { icon: iconPlay, title: "PARANHANAPLAY", desc: "4 Acessos Simultâneos" },
         { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
-        { icon: iconLivros, title: "PARANHANALIVROS", desc: " 4 Livros Digital Mensal + 1 AudioBook" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 1 AudioBook" },
         { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
       ],
       variant: "marfim" as const,
@@ -74,19 +76,20 @@ export function PricingSection() {
       title2: "Bordô",
       description: "Internet de sobra para toda a família",
       features: [
-        "Mão de obra especializada",
-        "Roteador Wi-fi última geração",
-        "Roteador ou Câmera Monitoramento Adicional",
-        "Gerenciamento da rede interna (SGRI)",
-        "Suporte Premium 24/7 ",
-        "1000 Mega",
+        { icon: FaMicrophone, desc: "Mão de obra especializada" },
+        { icon: FaWifi, desc: "Roteador Wi-fi última geração" },
+        { icon: FaVideo, desc: "Roteador ou Câmera Monitoramento Adicional" },
+        { icon: FaWrench, desc: "Gerenciamento da rede interna (SGRI)" },
+        { icon: FaHeadset, desc: "Suporte Premium 24/7" },
+        { icon: FaTachometerAlt, desc: "1000 Mega" },
       ],
       benefits: [
         { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
         { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
-        { icon: iconLivros, title: "PARANHANALIVROS", desc: " 4 Livros Digital Mensal + 2 AudioBook" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 2 AudioBook" },
         { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
-      ], benefitsAdd: [
+      ],
+      benefitsAdd: [
         { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
         { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
       ],
@@ -97,19 +100,20 @@ export function PricingSection() {
       title2: "Neon Gamer",
       description: "A conexão ideal para quem leva o game a sério",
       features: [
-        "Mão de obra especializada",
-        "Roteador Wi-fi última geração",
-        "Roteador ou Câmera Monitoramento Adicional",
-        "Gerenciamento da rede interna (SGRI)",
-        "Suporte Premium 24/7 ",
-        "1000 Mega",
+        { icon: FaMicrophone, desc: "Mão de obra especializada" },
+        { icon: FaWifi, desc: "Roteador Wi-fi última geração" },
+        { icon: FaVideo, desc: "Roteador ou Câmera Monitoramento Adicional" },
+        { icon: FaWrench, desc: "Gerenciamento da rede interna (SGRI)" },
+        { icon: FaHeadset, desc: "Suporte Premium 24/7" },
+        { icon: FaTachometerAlt, desc: "1000 Mega" },
       ],
       benefits: [
         { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
         { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
         { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 2 AudioBook" },
         { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
-      ], benefitsAdd: [
+      ],
+      benefitsAdd: [
         { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
         { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
       ],
@@ -120,19 +124,20 @@ export function PricingSection() {
       title2: "Dourado Business",
       description: "Potência e performance para todos os seus dispositivos",
       features: [
-        "Mão de obra especializada",
-        "Roteador Wi-fi última geração",
-        "Roteador ou Câmera Monitoramento Adicional",
-        "Gerenciamento da rede interna (SGRI)",
-        "Suporte Premium 24/7 ",
-        "1000 Mega",
+        { icon: FaMicrophone, desc: "Mão de obra especializada" },
+        { icon: FaWifi, desc: "Roteador Wi-fi última geração" },
+        { icon: FaVideo, desc: "Roteador ou Câmera Monitoramento Adicional" },
+        { icon: FaWrench, desc: "Gerenciamento da rede interna (SGRI)" },
+        { icon: FaHeadset, desc: "Suporte Premium 24/7" },
+        { icon: FaTachometerAlt, desc: "1000 Mega" },
       ],
       benefits: [
         { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
         { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
         { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 2 AudioBook" },
         { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
-      ], benefitsAdd: [
+      ],
+      benefitsAdd: [
         { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
         { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
       ],
@@ -149,6 +154,13 @@ export function PricingSection() {
       });
     }
   };
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (container && window.innerWidth >= 768) { 
+      container.scrollLeft = 200; 
+    }
+  }, []);
 
   return (
     <section className="relative overflow-hidden">

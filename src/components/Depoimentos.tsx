@@ -23,7 +23,6 @@ interface ReviewData {
   location: string;
 }
 
-// ----------------- Dados -----------------
 const videosData: VideoData[] = [
   {
     id: "v1",

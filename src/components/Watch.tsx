@@ -31,8 +31,8 @@ const Watch: React.FC = () => {
                 <div
                     className="
     max-w-xl w-full 
-    relative left-0 top-0
-    lg:flex lg:flex-col lg:items-start lg:justify-center lg:gap-2 lg:h-screen lg:left-1/4
+    relative -left-20 top-40
+        lg:flex lg:flex-col lg:items-start lg:justify-center lg:gap-2 lg:h-screen lg:left-1/4 lg:top-0
   "
                 >
                     <img

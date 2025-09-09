@@ -5,6 +5,7 @@ import carousel3 from "@/assets/carousel-3.png";
 import carousel4 from "@/assets/carousel-4.png";
 import logo from "@/assets/logo-simples.png";
 import premio from "@/assets/premio.png";
+import cidades from "@/assets/cidade.png";
 
 const HeroSection = () => {
   const awardImages = [
@@ -15,7 +16,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section
+    <section id="herosection"
       className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: `url(${parobe})` }}
     >
@@ -29,11 +30,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-2 gap-12 items-center w-full">
           <div className="flex flex-col items-center text-center text-white space-y-8 -mt-16">
             <div className="opacity-90">
-              <img
-                src={premio}
-                alt="prêmio"
-                className="w-68 mb-12 lg:w-72"
-              />
+              <img src={premio} alt="prêmio" className="w-68 mb-12 lg:w-72" />
               <h2>
                 <strong>A MAIS VELOZ DO VALE DO PARANHANA</strong>
               </h2>
@@ -55,6 +52,16 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      <style>
+        {`
+    @media (min-width: 1024px) {
+      #herosection {
+        background-image: url(${cidades}) !important;
+      }
+    }
+  `}
+      </style>
     </section>
   );
 };
