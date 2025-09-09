@@ -46,6 +46,8 @@
 
 @media (min-width: 1024px) {
   body {
-    transform: scale(0.7) !important;
+    transform: scale(0.9);
+    transform-origin: top left;
+    width: 111.11%;
   }
 }
