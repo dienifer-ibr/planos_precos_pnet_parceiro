@@ -193,7 +193,7 @@ export function PricingSection() {
           </div>
 
           <div className="relative">
-            <div className="absolute -top-12 -right-8 flex space-x-3 z-10">
+            <div className="absolute -top-12 -right-8 lg:-right-48 flex space-x-3 z-10">
               <button
                 onClick={() => scroll("left")}
                 className="bg-background/80 p-1 rounded-full shadow-md hover:bg-background"
