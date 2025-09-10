@@ -143,6 +143,30 @@ export function PricingSection() {
       ],
       variant: "dourado" as const,
     },
+    {
+      title: "Plano",
+      title2: "Cinza",
+      description: "Internet de sobra para toda a família",
+      features: [
+        { icon: FaMicrophone, desc: "Mão de obra especializada" },
+        { icon: FaWifi, desc: "Roteador Wi-fi última geração" },
+        { icon: FaVideo, desc: "Roteador ou Câmera Monitoramento Adicional" },
+        { icon: FaWrench, desc: "Gerenciamento da rede interna (SGRI)" },
+        { icon: FaHeadset, desc: "Suporte Premium 24/7" },
+        { icon: FaTachometerAlt, desc: "1000 Mega" },
+      ],
+      benefits: [
+        { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
+        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 2 AudioBook" },
+        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
+      ],
+      benefitsAdd: [
+        { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
+        { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
+      ],
+      variant: "cinza" as const,
+    },
   ];
 
   const scroll = (direction: "left" | "right") => {

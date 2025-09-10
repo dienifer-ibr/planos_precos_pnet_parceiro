@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { SiWhatsapp } from "react-icons/si";
 import { FaPlus } from 'react-icons/fa';
 import { IconType } from "react-icons";
+import cameraEsquerda from "@/assets/camera-esquerda.png";
+import cameraDireita from "@/assets/camera-direita.png";
 
 interface Benefit {
   icon: string;
@@ -23,7 +25,6 @@ interface Feature {
   desc: string;
 }
 
-
 interface PlanCardProps {
   title: string;
   title2: string;
@@ -32,7 +33,9 @@ interface PlanCardProps {
   popular?: boolean;
   benefits: Benefit[];
   benefitsAdd?: benefitsAdd[];
-  variant: "laranja" | "marron" | "marfim" | "bordo" | "neon" | "dourado";
+  cameraleft?: boolean;
+  cameraright?: boolean;
+  variant: "laranja" | "marron" | "marfim" | "bordo" | "neon" | "dourado" | "cinza";
 }
 
 export function PlanCard({
@@ -40,9 +43,10 @@ export function PlanCard({
   title2,
   description,
   features,
-  popular = false,
   benefits,
   benefitsAdd,
+  cameraleft,
+  cameraright,
   variant
 }: PlanCardProps) {
   const getVariantClasses = () => {
@@ -113,14 +117,40 @@ export function PlanCard({
           iconAdd: "bg-yellow-600 text-white",
           iconFeature: "text-yellow-600",
         };
+      case "cinza":
+        return {
+          card: "border-steel/20 bg-gradient-to-br from-card to-steel/5 hover:shadow-glow",
+          badge: "bg-gray-600 text-white",
+          blockBg: "bg-gray-600 text-white",
+          title: "text-gray-600",
+          button: "bg-gray-600 hover:bg-gray-700 text-white",
+          color: "text-gray-600",
+          iconAdd: "bg-gray-600 text-white",
+          iconFeature: "text-gray-600",
+        };
     }
   };
 
   const variantClasses = getVariantClasses();
 
+  const showCameraLeft = cameraleft ?? (variant === "bordo" || variant === "cinza");
+  const showCameraRight = cameraright ?? (variant === "marron" || variant === "neon" || variant === "dourado");
+
   return (
     <Card className={`relative transition-all duration-300 ${variantClasses.card}`}>
-      <CardHeader className="text-initial pb-8 lg:-pb-2">
+      <CardHeader className="text-initial pb-8 lg:-pb-2 relative">
+        {(showCameraLeft || showCameraRight) && (
+          <img
+            src={showCameraLeft ? cameraEsquerda : cameraDireita}
+            alt="Câmera"
+            className={
+              showCameraRight
+                ? "absolute top-36 left-56 w-20 h-20 lg:w-18 lg:h-18"
+                : "absolute top-32 right-56 w-20 h-20 lg:w-18 lg:h-18"
+            }
+          />
+        )}
+
         <CardTitle className={`text-2x1 sm:text-2xl md:text-3xl lg:text-2xl font-bold ${variantClasses.title}`}>
           {title}
         </CardTitle>
