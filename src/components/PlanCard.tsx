@@ -7,6 +7,7 @@ import { FaPlus } from 'react-icons/fa';
 import { IconType } from "react-icons";
 import cameraEsquerda from "@/assets/camera-esquerda.png";
 import cameraDireita from "@/assets/camera-direita.png";
+import LogoFundo from "@/assets/pnet-transparente2.png";
 
 interface Benefit {
   icon: string;
@@ -144,7 +145,7 @@ export function PlanCard({
   const showCameraRight = cameraright ?? (variant === "marron" || variant === "neon" || variant === "dourado");
 
   return (
-    <Card className={`relative transition-all duration-300 ${variantClasses.card}`}>
+    <Card className={`relative overflow-hidden transition-all duration-300 ${variantClasses.card}`}>
       <CardHeader className="text-initial pb-8 lg:-pb-2 relative">
         {(showCameraLeft || showCameraRight) && (
           <img
@@ -173,6 +174,13 @@ export function PlanCard({
         </p>
 
         <div className="pt-4 lg:pt-2">
+          <div className="absolute left-1/2 -translate-x-1/2">
+            <img
+              src={LogoFundo}
+              alt="Background"
+              className="opacity-80"
+            />
+          </div>
           <div className={`grid grid-cols-2 gap-4 sm:gap-6 lg:gap-4 p-4 sm:p-6 lg:p-3 rounded-2xl text-center -mb-6 ${variantClasses.blockBg}`}>
             {benefits.map((b, index) => (
               <div key={index} className="flex flex-col items-center">
