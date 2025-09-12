@@ -209,7 +209,7 @@ export function PlanCard({
               <div key={index} className="flex flex-col items-center">
                 <img
                   src={b.icon}
-                  className="w-24 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-10 lg:h-10 -mb-2 -mt-2"
+                  className="w-24 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-24 lg:h-12 -mb-2 -mt-2"
                 />
               </div>
             )) ?? null}
