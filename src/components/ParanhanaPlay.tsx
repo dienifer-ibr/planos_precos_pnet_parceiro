@@ -5,7 +5,7 @@ import Paranhana_Play from "@/assets/ParanhanaPlay.png";
 
 const ParanhanaPlay: React.FC = () => {
     return (
-        <section
+        <section id="paranhanaplay"
             className="relative w-full h-screen bg-cover bg-center flex flex-col items-center justify-center lg:bg-contain"
             style={{
                 backgroundImage: `url(${ParanhanaPlay_Fundo})`,

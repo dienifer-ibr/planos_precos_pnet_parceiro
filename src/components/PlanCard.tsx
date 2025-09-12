@@ -42,6 +42,7 @@ interface PlanCardProps {
   benefitsAdd2?: benefitsAdd2[];
   cameraleft?: boolean;
   cameraright?: boolean;
+  msg?: string;
   variant: "laranja" | "marron" | "marfim" | "bordo" | "neon" | "dourado" | "cinza";
 }
 
@@ -55,6 +56,7 @@ export function PlanCard({
   benefitsAdd2,
   cameraleft,
   cameraright,
+  msg,
   variant
 }: PlanCardProps) {
   const getVariantClasses = () => {
@@ -253,9 +255,19 @@ export function PlanCard({
           ))}
         </ul>
 
-        <Button className={`w-full !mt-8 text-xs sm:text-sm md:text-base py-2 sm:py-3 ${variantClasses.button}`}>
-          <SiWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-          Contrate Já
+        <Button
+          asChild
+          className={`w-full !mt-8 text-xs sm:text-sm md:text-base py-2 sm:py-3 ${variantClasses.button}`}
+        >
+          <a
+            href={msg}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2"
+          >
+            <SiWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+            Contrate Já
+          </a>
         </Button>
       </CardContent>
     </Card>

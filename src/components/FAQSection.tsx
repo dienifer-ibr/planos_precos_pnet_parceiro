@@ -99,6 +99,12 @@ const FAQSection: React.FC = () => {
         ))}
         <div className="text-center">
           <button
+            onClick={() =>
+              window.open(
+                "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de tirar algumas dúvidas.",
+                "_blank"
+              )
+            }
             className="inline-flex items-center space-x-2 px-6 py-2 text-sm border border-white rounded-md text-white bg-transparent hover:bg-white/10 transition"
             type="button"
           >

@@ -10,7 +10,7 @@ const Footer = () => {
     { title: "ParanhanaPlay", href: "#paranhanaplay" },
     { title: "ParanhanaClube", href: "#paranhanaclube" },
     { title: "Watch + Paramount", href: "#watch-paramount" },
-    { title: "Constate-nos", href: "#contato" },
+    { title: "Contate-nos", href: "https://api.whatsapp.com/send/?phone=555135431099" },
   ];
 
   const addresses = [
@@ -20,14 +20,15 @@ const Footer = () => {
   ];
 
   const socialIcons = [
-    { icon: SiYoutube, href: "#youtube" },
-    { icon: SiInstagram, href: "#instagram" },
-    { icon: SiFacebook, href: "#facebook" },
+    { icon: SiYoutube, href: "https://www.youtube.com/channel/UCi_OjHL24L9Tug3-LJkbZqQ" },
+    { icon: SiInstagram, href: "https://www.instagram.com/paranhananet.br/" },
+    { icon: SiFacebook, href: "https://www.facebook.com/ParanhanaNET" },
   ];
 
   return (
     <section className="relative w-full bg-[#1800ad] flex flex-col justify-center items-center px-6 py-16 overflow-hidden">
-      {/* Fundo */}
+      <style>{`html { scroll-behavior: smooth; }`}</style>
+
       <img
         src={FooterImage}
         alt="Background decorativo"
@@ -35,7 +36,6 @@ const Footer = () => {
         style={{ zIndex: 0, objectPosition: "160% center", maxWidth: "600px" }}
       />
 
-      {/* Logo */}
       <div className="relative z-10 mb-12">
         <img
           src={LogoFooter}
@@ -44,16 +44,13 @@ const Footer = () => {
         />
       </div>
 
-      {/* Layout principal */}
       <div className="relative z-10 w-full max-w-md mx-auto text-center 
                       md:max-w-7xl md:text-left md:grid md:grid-cols-3 md:gap-12">
-        {/* Coluna 1 - Links (MOBILE mantém botões, DESKTOP vira lista) */}
         <div className="mb-12 md:mb-0">
           <h1 className="text-2xl font-bold text-white mb-6 tracking-wide">
             Links Úteis
           </h1>
 
-          {/* Mobile: botões */}
           <div className="space-y-4 md:hidden">
             {links.map((link, index) => (
               <Button
@@ -73,7 +70,6 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Desktop: lista simples */}
           <ul className="hidden md:flex md:flex-col md:gap-3 text-white">
             {links.map((link, index) => (
               <li key={index}>
@@ -88,7 +84,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Coluna 2 - Contato */}
         <div className="space-y-6 text-white md:max-w-xs mx-auto md:mx-0">
           <div className="text-center md:text-left">
             <div className="text-sm font-medium text-white mb-1">(51) WhatsApp</div>
@@ -116,7 +111,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Coluna 3 - Endereços */}
         <div className="space-y-4 text-sm mt-6 md:mt-0 text-white">
           <h2 className="font-bold text-xl mb-4 hidden md:block">Nossos Endereços</h2>
           {addresses.map((address, index) => (
@@ -131,7 +125,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Rodapé inferior */}
       <div className="hidden md:flex relative z-10 border-t border-white/20 mt-12 pt-6 flex-col md:flex-row justify-between items-center text-sm text-white/80 max-w-7xl w-full">
         <p>© 2025 Paranhananet - Todos os direitos reservados.</p>
         <div className="flex gap-4 mt-4 md:mt-0 text-2xl">

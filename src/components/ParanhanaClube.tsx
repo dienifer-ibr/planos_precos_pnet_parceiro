@@ -7,7 +7,7 @@ import { FaApple, FaGooglePlay } from 'react-icons/fa';
 
 const ParanhanaClube = () => {
   return (
-    <section className="min-h-screen bg-gradient-purple relative overflow-hidden flex items-center justify-center px-4 py-16">
+    <section id="paranhanaclube" className="min-h-screen bg-gradient-purple relative overflow-hidden flex items-center justify-center px-4 py-16">
       <div className="absolute top-20 left-1/2 transform -translate-x-1/2">
         <img src={LogoParanhanaClube} alt="ParanhanaNet" className="w-60 lg:w-96" />
       </div>

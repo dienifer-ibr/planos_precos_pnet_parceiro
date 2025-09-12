@@ -30,6 +30,7 @@ export function PricingSection() {
         { icon: iconLivros, title: "PARANHANALIVROS", desc: "3 Livros Digital Mensal" },
         { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
       ],
+      msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano laranja.",
       variant: "laranja" as const,
     },
     {
@@ -50,6 +51,7 @@ export function PricingSection() {
         { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 1 AudioBook" },
         { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
       ],
+      msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano marron.",
       variant: "marron" as const,
     },
     {
@@ -69,6 +71,7 @@ export function PricingSection() {
         { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 1 AudioBook" },
         { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
       ],
+      msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano marfin.",
       variant: "marfim" as const,
     },
     {
@@ -93,6 +96,7 @@ export function PricingSection() {
         { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
         { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
       ],
+      msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano bordô.",
       variant: "bordo" as const,
     },
     {
@@ -117,6 +121,7 @@ export function PricingSection() {
         { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
         { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
       ],
+      msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano neon gamer.",
       variant: "neon" as const,
     },
     {
@@ -141,6 +146,7 @@ export function PricingSection() {
         { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
         { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
       ],
+      msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano dourado business.",
       variant: "dourado" as const,
     },
     {
@@ -164,6 +170,7 @@ export function PricingSection() {
       benefitsAdd2: [
         { icon: iconGloboPlay, title: "logo Globo Blay", desc: "Globo play" },
       ],
+      msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano cinza.",
       variant: "cinza" as const,
     },
   ];
@@ -186,7 +193,7 @@ export function PricingSection() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden">
+    <section id="planos" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
         <svg
           className="relative block w-full h-20 animate-wave"

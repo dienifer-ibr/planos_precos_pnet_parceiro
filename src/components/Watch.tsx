@@ -7,7 +7,7 @@ import WatchDesktop from "@/assets/watchDesktop.png";
 
 const Watch: React.FC = () => {
     return (
-        <section
+        <section id="watch-paramount"
             className="relative w-full min-h-screen bg-cover bg-center lg:bg-contain"
             style={{
                 backgroundImage: `url(${ControleWatch})`,
