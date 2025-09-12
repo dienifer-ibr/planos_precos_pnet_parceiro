@@ -8,7 +8,7 @@ import iconRevistas from "@/assets/icon-previstas.png";
 import iconWatch from "@/assets/logoWatch.png";
 import iconParamount from "@/assets/logoParamount.png";
 import { FaMicrophone, FaWifi, FaWrench, FaHeadset, FaTachometerAlt, FaVideo } from "react-icons/fa";
-
+import iconGloboPlay from "@/assets/logo_globoplay.png";
 export function PricingSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -161,9 +161,8 @@ export function PricingSection() {
         { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 2 AudioBook" },
         { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
       ],
-      benefitsAdd: [
-        { icon: iconWatch, title: "logo watch", desc: "4 Acessos Simultâneos" },
-        { icon: iconParamount, title: "logo paramount", desc: "2 Acessos Simultâneos" },
+      benefitsAdd2: [
+        { icon: iconGloboPlay, title: "logo Globo Blay", desc: "Globo play" },
       ],
       variant: "cinza" as const,
     },

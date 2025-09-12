@@ -20,6 +20,11 @@ interface benefitsAdd {
   desc: string;
 }
 
+interface benefitsAdd2 {
+  icon: string;
+  title: string;
+  desc: string;
+}
 interface Feature {
   icon: IconType;
   desc: string;
@@ -33,6 +38,7 @@ interface PlanCardProps {
   popular?: boolean;
   benefits: Benefit[];
   benefitsAdd?: benefitsAdd[];
+  benefitsAdd2?: benefitsAdd2[];
   cameraleft?: boolean;
   cameraright?: boolean;
   variant: "laranja" | "marron" | "marfim" | "bordo" | "neon" | "dourado" | "cinza";
@@ -45,6 +51,7 @@ export function PlanCard({
   features,
   benefits,
   benefitsAdd,
+  benefitsAdd2,
   cameraleft,
   cameraright,
   variant
@@ -193,6 +200,17 @@ export function PlanCard({
                 <p className="text-[7px] sm:text-[9px] md:text-xs lg:text-[9px] leading-tight mt-0">
                   {b.desc}
                 </p>
+              </div>
+            )) ?? null}
+          </div>
+
+          <div className={`grid grid-cols-1 gap-4 sm:gap-6 lg:gap-4 p-4 sm:p-6 lg:p-3 rounded-2xl text-center -mb-6 ${variantClasses.blockBg}`}>
+            {benefitsAdd2?.map((b, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <img
+                  src={b.icon}
+                  className="w-24 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-10 lg:h-10 -mb-2 -mt-2"
+                />
               </div>
             )) ?? null}
           </div>
