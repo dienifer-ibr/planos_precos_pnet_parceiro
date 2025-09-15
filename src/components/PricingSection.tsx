@@ -214,10 +214,10 @@ export function PricingSection() {
         </svg>
       </div>
 
-      <section className="py-24 px-4 bg-gradient-to-b from-[#a3cef1]/60 via-white/70 to-[#a3cef1]/60 relative z-10">
+      <section className="py-24 px-4 bg-gradient-to-b from-blue-200 via-blue-400 to-blue-800 relative z-10">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-primary mb-16">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-16">
               <strong>Conheça nossos planos</strong>
             </h1>
           </div>
@@ -257,11 +257,11 @@ export function PricingSection() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-sm text-muted-foreground">
-              Tem dúvidas? Entre em contato conosco através{" "}
+            <p className="text-sm text-muted-foreground text-white  ">
+              Tem dúvidas? Entre em contato conosco através do{" "}
               <a
                 href="tel:513543-1099"
-                className="text-primary hover:underline font-medium"
+                className="text-primary hover:underline font-medium text-white"
               >
                 (51) 3543-1099
               </a>

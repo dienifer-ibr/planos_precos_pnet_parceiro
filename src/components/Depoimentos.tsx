@@ -126,6 +126,7 @@ const ReviewsShowcase = () => {
 
   const goToNextVideo = () =>
     setVideoIndex((prev) => (prev >= videosData.length - 1 ? 0 : prev + 1));
+
   const goToPreviousVideo = () =>
     setVideoIndex((prev) => (prev <= 0 ? videosData.length - 1 : prev - 1));
 
@@ -136,7 +137,7 @@ const ReviewsShowcase = () => {
   const reviewsLoop = [...reviewsData, ...reviewsData];
 
   return (
-    <section className="relative py-16 min-h-screen bg-gradient-to-b from-pink-400 via-pink-500 to-pink-600">
+    <section className="relative py-16 min-h-screen bg-gradient-to-b from-blue-600 via-blue-700 to-blue-800">
       <img
         src={Logo}
         alt="Background decorativo"

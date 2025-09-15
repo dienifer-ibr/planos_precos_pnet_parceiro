@@ -5,9 +5,8 @@ import OverlayImage from "@/assets/IndiqueGanhe.png";
 
 const IndiqueGanhe = () => {
     return (
-        <section className="relative min-h-screen bg-blue-800 overflow-hidden flex items-center justify-center px-4">
+        <section className="relative min-h-screen overflow-hidden flex items-center justify-center px-4">
 
-            {/* Imagem de fundo centralizada */}
             <img
                 src={Logo}
                 alt="Logo de fundo"
@@ -21,11 +20,11 @@ const IndiqueGanhe = () => {
                     alt="Decorativa"
                     className="w-60 md:w-96 lg:relative lg:mt-20"
                 />
-                <h1 className="text-white text-7xl md:text-6xl font-bold text-center -mt-16 md:-mt-2 leading-tight lg:relative lg:-top-16 lg:text-[7rem] text-shadow-blue">
+                <h1 className="text-black text-7xl md:text-6xl font-bold text-center -mt-16 md:-mt-2 leading-tight lg:relative lg:-top-16 lg:text-[7rem]">
                     <strong>
                         Indique <br />
                         <span className="text-4xl md:text-2xl relative -top-10 md:-top-4">&</span>
-                        <span className="relative -top-6 md:-top-4">Ganhe</span>
+                        <span className="relative -top-6 md:-top-4">Ganhe (sendo ajustado)</span>
                     </strong>
                 </h1>
 

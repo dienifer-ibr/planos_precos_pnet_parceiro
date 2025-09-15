@@ -66,15 +66,15 @@ const faqData: FAQCategory[] = [
 const FAQSection: React.FC = () => {
   return (
     <section
-      className="py-8 text-white"
+      className="py-8 text-black"
       style={{
-        background: "linear-gradient(135deg, #76b1f4ff 0%, #1f5594 100%)",
+        background: "linear-gradient(135deg, #ffffffff 0%, #ffffffff 100%)",
       }}
     >
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold mb-2">FAQ</h2>
-          <p className="text-base mb-2">Dúvidas frequentes</p>
+          <h2 className="text-3xl font-bold text-blue-600 mb-2">FAQ</h2>
+          <p className="text-base text-blue-900 mb-2">Dúvidas frequentes</p>
         </div>
 
         {faqData.map((category) => (
@@ -84,9 +84,9 @@ const FAQSection: React.FC = () => {
                 <AccordionItem
                   key={faq.id}
                   value={faq.id}
-                  className="border rounded p-3"
+                  className="border-b p-3"
                 >
-                  <AccordionTrigger className="font-medium text-sm">
+                  <AccordionTrigger className="font-medium text-sm [&>svg]:text-blue-500">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="pt-1 text-sm">

@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
 
 @layer base {
   :root {
@@ -147,5 +144,37 @@ All colors MUST be HSL.
 @screen lg {
   .text-shadow-blue {
     text-shadow: 30px 20px 20px rgba(0, 123, 255, 0.7);
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff !important;
+  fill: #fff !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  opacity: 0.6 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 70px !important;
+    right: 10px !important;
+    left: auto !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .swiper-button-prev {
+    margin-right: 40px !important;
   }
 }
