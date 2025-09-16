@@ -6,12 +6,16 @@ import Fundo from "@/assets/fundo.png";
 
 const IndiqueGanhe = () => {
     return (
-        <section className="relative min-h-screen overflow-hidden flex items-center justify-center px-4">
+        <section
+            id="indique-ganhe"
+            className="
+    relative min-h-screen overflow-hidden flex items-center justify-center px-4
+    bg-[length:140%_60%] bg-[center_top] bg-no-repeat
+    lg:bg-[length:40%_60%] lg:bg-[left_top] lg:bg-repeat-y
+  "
+            style={{ backgroundImage: `url(${Fundo})` }}
+        >
 
-{/* 
-            style={{
-                backgroundImage: `url(${Fundo})`,
-            }} */}
             <img
                 src={Logo}
                 alt="Logo de fundo"
@@ -23,7 +27,7 @@ const IndiqueGanhe = () => {
                 <img
                     src={OverlayImage}
                     alt="Decorativa"
-                    className="w-96 md:w-96 lg:relative lg:mt-20"
+                    className="w-96 md:w-96 lg:relative mt-20 lg:mt-20"
                 />
                 <p className="text-lg text-muted-foreground text-blue-800 text-center">
                     Ganhe até <strong>1 mês de internet <br />grátis </strong>por indicação.
