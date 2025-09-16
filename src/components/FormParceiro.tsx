@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 
 const FormParceiro = () => {
-    const [id, setId] = useState(null);
+     const [id, setId] = useState<string | null>(null);
 
-    useEffect(() => {
-        const params = new URLSearchParams(window.location.search);
-        const idParam = params.get("id");
-        if (idParam) {
-            setId(idParam);
-        }
-    }, []);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const idParam = params.get("id");
+    setId(idParam);
+  }, []);
+
+  console.log("ID do parceiro:", id);
 
     return (
 
