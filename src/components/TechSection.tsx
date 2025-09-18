@@ -1,63 +1,46 @@
 import { Card, CardContent } from "@/components/ui/card";
-import businessMeeting from "@/assets/business-meeting.png";
+import iconVelocidade from "@/assets/icon_velocidade.png";
+import iconsuporte from "@/assets/icon_suporte.png";
+import iconPremiacoes from "@/assets/icon_premiacoes.png";
+import iconInstalacao from "@/assets/icon_instalacao.png";
 
 const techFeatures = [
-  "Top 1 em Taquara, Igrejinha e Parobé",
-  "Top 1 velocidade do Vale do Paranhana",
-  "Entre as 3 melhores do Rio Grande do Sul",
-  "Entre as 10 melhores do Brasil",
-  "Preços acessíveis",
-  "Suporte Premium 24h por dia X 7dias",
-  "Atendimento rápido",
-  "Instalação gratuita",
-  "Mensalidades grátis no Programa Indique e Ganhe"
-];
-
-const productFeatures = [
-  "Inovação: últimas tendências do entretenimento",
-  "Referências: equipes presentes nos eventos do setor no mundo todo",
-  "Produtos projetados para garantir a melhor experiência do usuário",
-  "Parcerias Estratégicas para enriquecer o portfólio de conteúdo"
-];
-
-const managementFeatures = [
-  "Alinhamento Estratégico: projetos cuidadosamente alinhados com os objetivos do cliente provedor",
-  "Equipe com PMO e Scrum Master",
-  "Colaboração Interfuncional: cultura de colaboração entre as diversas áreas",
-  "Monitoramento e Avaliação: identificam áreas de melhoria e oportunidades de otimização"
+  { icon: iconVelocidade, text: "Alta velocidade" },
+  { icon: iconsuporte, text: "Suporte 24/7" },
+  { icon: iconPremiacoes, text: "Entre os 3 melhores do RS" },
+  { icon: iconInstalacao, text: "Instalação gratuita" },
 ];
 
 const TechSection = () => {
   return (
-    <section className="py-10 bg-background">
+    <section className="py-10 bg-blue-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-10">
-          <img
-            src={businessMeeting}
-            alt="Para provedores watch brasil"
-            className="w-64 h-48 object-cover rounded-lg mx-auto mb-8 shadow-lg"
-          />
-          <h2 className="text-4xl font-bold text-primary mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Porque escolher a ParanhanaNet?
           </h2>
-          <h3 className="text-2xl text-muted-foreground">
+          <h3 className="text-2xl text-white text-opacity-80">
             Conheça os nossos diferenciais
           </h3>
         </div>
 
-        {/* Tech Features */}
-        <div className="mb-0">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {techFeatures.map((feature, index) => (
-              <Card key={index} className="border-l-4 border-l-primary shadow-md hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <p className="text-foreground font-medium">{feature}</p>
+              <Card
+                key={index}
+                className="shadow-md hover:shadow-lg transition-shadow bg-white/20 flex flex-col items-center text-center
+                   w-full max-w-[50%] md:max-w-full mx-auto"
+              >
+                <CardContent className="p-6 flex flex-col items-center lg:gap-4">
+                  <img src={feature.icon} alt={`Ícone ${index}`} className="w-16 h-18" />
+                  <p className="text-white font-medium">{feature.text}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

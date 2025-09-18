@@ -16,7 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Watch from "@/components/Watch";
 import IndiqueGanhe from "@/components/IndiqueGanhe";
-import FormParceiro from "@/components/FormParceiro";
+import Formulario from '@/components/Formulario';
 
 const Index = () => {
   return (
@@ -67,8 +67,7 @@ const Index = () => {
         </Swiper>
         <IndiqueGanhe />
         <Depoimentos />
-        <FormParceiro />
-
+        <Formulario />
         <FAQSection />
       </main>
       <Footer />
