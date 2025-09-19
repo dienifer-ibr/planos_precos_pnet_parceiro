@@ -10,7 +10,7 @@ const Footer = () => {
     { title: "ParanhanaPlay", href: "#paranhanaplay" },
     { title: "ParanhanaClube", href: "#paranhanaclube" },
     { title: "Watch + Paramount", href: "#watch-paramount" },
-    { title: "Contate-nos", href: "https://api.whatsapp.com/send/?phone=555135431099" },
+    { title: "Contate-nos", href: "#contato" },
   ];
 
   const addresses = [

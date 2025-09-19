@@ -20,7 +20,7 @@ const FormularioFront: React.FC = () => {
   };
   
   return (
-    <div style={{ maxWidth: "800px", margin: "0 auto"}}>
+    <div id='contato' style={{ maxWidth: "800px", margin: "0 auto"}}>
       <iframe style={iframeStyle} src="https://app.mailingboss.com/lists/68cd8de98368d/subscribe" scrolling="no"></iframe>
     </div>
   );
