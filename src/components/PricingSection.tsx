@@ -197,7 +197,7 @@ export function PricingSection() {
       <section className="py-24 px-4 bg-gradient-to-b">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-16">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-24">
               <strong>Conheça nossos planos</strong>
             </h1>
           </div>
