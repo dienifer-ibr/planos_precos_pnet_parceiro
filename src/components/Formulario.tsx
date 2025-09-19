@@ -13,7 +13,7 @@ const FormularioFront: React.FC = () => {
   const isMobile = window.innerWidth <= 768; 
   const iframeStyle = {
     width: "100%",
-    height: isMobile ? "440px" : "580px", 
+    height: isMobile ? "480px" : "580px", 
     border: "0",
     display: "block",
     marginTop: isMobile ? "50px" : "150px",
