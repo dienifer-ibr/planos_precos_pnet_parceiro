@@ -41,7 +41,7 @@ const FormularioFront: React.FC = () => {
           name="FNAME"
           type="text"
           id="FNAME"
-          style={{ width: "100%", padding: "8px", borderRadius: "20px" }}
+          style={{ width: "100%", padding: "8px", borderRadius: "20px", color: "#000000" }}
         />
       </div>
 
@@ -54,7 +54,7 @@ const FormularioFront: React.FC = () => {
           name="EMAIL"
           type="email"
           id="EMAIL"
-          style={{ width: "100%", padding: "8px", borderRadius: "20px"  }}
+          style={{ width: "100%", padding: "8px", borderRadius: "20px", color: "#000000"  }}
         />
       </div>
 
@@ -67,7 +67,7 @@ const FormularioFront: React.FC = () => {
           name="PHONE"
           type="text"
           id="PHONE"
-          style={{ width: "100%", padding: "8px", borderRadius: "20px"  }}
+          style={{ width: "100%", padding: "8px", borderRadius: "20px", color: "#000000"  }}
         />
       </div>
 
@@ -79,7 +79,7 @@ const FormularioFront: React.FC = () => {
           name="ID"
           type="text"
           id="ID"
-          style={{ width: "100%", padding: "8px", borderRadius: "20px"  }}
+          style={{ width: "100%", padding: "8px", borderRadius: "20px", color: "#000000"  }}
         />
       </div>
 
