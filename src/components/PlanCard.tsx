@@ -2,7 +2,6 @@ import { Check, Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { SiWhatsapp } from "react-icons/si";
 import { FaPlus } from 'react-icons/fa';
 import { IconType } from "react-icons";
 import cameraEsquerda from "@/assets/camera-esquerda.png";
@@ -260,12 +259,16 @@ export function PlanCard({
           className={`w-full !mt-8 text-xs sm:text-sm md:text-base py-2 sm:py-3 ${variantClasses.button}`}
         >
           <a
-            href={msg}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              const section = document.getElementById("contato");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="flex items-center space-x-2 cursor-pointer"
           >
-            <SiWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
             Contrate Já
           </a>
         </Button>

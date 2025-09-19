@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { SiWhatsapp } from "react-icons/si";
 import LogoFundo from "@/assets/pnet-transparente.png";
 import CllParanhanaClube from "@/assets/CllParnhanaClube.png";
 import LogoParanhanaClube from "@/assets/LogoParanhanaClube.png";

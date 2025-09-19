@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { SiWhatsapp } from "react-icons/si";
 import Logo from "@/assets/pnet-transparente.png";
 import OverlayImage from "@/assets/indique_ganhe.png";
 import Fundo from "@/assets/fundo.png";
@@ -14,7 +13,7 @@ const IndiqueGanhe = () => {
                 className="absolute inset-0 bg-no-repeat bg-[length:140%_60%] bg-[center_top] lg:hidden"
                 style={{ backgroundImage: `url(${Fundo})` }}
             />
-            
+
             <div
                 className="absolute inset-0 bg-no-repeat bg-[length:140%_60%] bg-[center_top] lg:hidden"
                 style={{ backgroundImage: `url(${Fundo})` }}
@@ -41,11 +40,16 @@ const IndiqueGanhe = () => {
                     className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-full mt-16 flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                     <a
-                        href="https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre a campanha Indique e Ganhe."
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            const section = document.getElementById("contato");
+                            if (section) {
+                                section.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}
+                        className="flex items-center space-x-2 cursor-pointer"
                     >
-                        <SiWhatsapp className="w-6 h-6" />
                         Mais informações
                     </a>
                 </Button>
