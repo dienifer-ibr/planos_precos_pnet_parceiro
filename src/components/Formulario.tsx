@@ -9,19 +9,12 @@ const FormularioFront: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const iframeStyle = {
-    width: isMobile ? "80%" : "100%",
-    height: isMobile ? "550px" : "580px",
-    border: "0",
-    display: "block",
-    marginTop: isMobile ? "100px" : "150px",
-    marginBottom: isMobile ? "80px" : "100px",
-  };
 
   return (
   <div
     id="contato"
     style={{
+      width: "80%",
       maxWidth: "800px",
       margin: "0 auto",
       background: "#1E40AF",
