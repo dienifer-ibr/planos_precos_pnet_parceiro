@@ -1,4 +1,3 @@
-import { noop } from '@tanstack/react-query';
 import React, { useState, useEffect } from 'react';
 
 const FormularioFront: React.FC = () => {
@@ -16,12 +15,12 @@ const FormularioFront: React.FC = () => {
     height: isMobile ? "550px" : "580px", 
     border: "0",
     display: "block",
-    marginTop: isMobile ? "50px" : "150px",
-    marginBottom: isMobile ? "50px" : "100px",
+    marginTop: isMobile ? "100px" : "150px",
+    marginBottom: isMobile ? "80px" : "100px",
   };
   
   return (
-    <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+    <div style={{ maxWidth: "800px", margin: "0 auto"}}>
       <iframe style={iframeStyle} src="https://app.mailingboss.com/lists/68cd8de98368d/subscribe" scrolling="no"></iframe>
     </div>
   );
