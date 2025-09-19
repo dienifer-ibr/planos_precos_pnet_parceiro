@@ -145,7 +145,7 @@ const ReviewsShowcase = () => {
         style={{ zIndex: 0, maxWidth: "800px" }}
       />
 
-      <div className="relative max-w-16xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-16xl mx-auto px-4 sm:px-6 lg:px-8 mb-48">
         <div className="mb-16 flex flex-col">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl lg:text-5xl font-bold text-white">

@@ -76,6 +76,30 @@ export function PricingSection() {
     },
     {
       title: "Plano",
+      title2: "Cinza",
+      description: "Internet de sobra para toda a família",
+      features: [
+        { icon: FaMicrophone, desc: "Mão de obra especializada" },
+        { icon: FaWifi, desc: "Roteador Wi-fi última geração" },
+        { icon: FaVideo, desc: "Roteador ou Câmera Monitoramento Adicional" },
+        { icon: FaWrench, desc: "Gerenciamento da rede interna (SGRI)" },
+        { icon: FaHeadset, desc: "Suporte Premium 24/7" },
+        { icon: FaTachometerAlt, desc: "1000 Mega" },
+      ],
+      benefits: [
+        { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
+        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
+        { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 2 AudioBook" },
+        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
+      ],
+      benefitsAdd2: [
+        { icon: iconGloboPlay, title: "logo Globo Blay", desc: "Globo play" },
+      ],
+      msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano cinza.",
+      variant: "cinza" as const,
+    },
+    {
+      title: "Plano",
       title2: "Bordô",
       description: "Internet de sobra para toda a família",
       features: [
@@ -148,30 +172,6 @@ export function PricingSection() {
       ],
       msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano dourado business.",
       variant: "dourado" as const,
-    },
-    {
-      title: "Plano",
-      title2: "Cinza",
-      description: "Internet de sobra para toda a família",
-      features: [
-        { icon: FaMicrophone, desc: "Mão de obra especializada" },
-        { icon: FaWifi, desc: "Roteador Wi-fi última geração" },
-        { icon: FaVideo, desc: "Roteador ou Câmera Monitoramento Adicional" },
-        { icon: FaWrench, desc: "Gerenciamento da rede interna (SGRI)" },
-        { icon: FaHeadset, desc: "Suporte Premium 24/7" },
-        { icon: FaTachometerAlt, desc: "1000 Mega" },
-      ],
-      benefits: [
-        { icon: iconPlay, title: "PARANHANAPLAY", desc: "6 Acessos Simultâneos" },
-        { icon: iconClube, title: "PARANHANACLUBE", desc: "1 Acesso + 2 Dependentes" },
-        { icon: iconLivros, title: "PARANHANALIVROS", desc: "4 Livros Digital Mensal + 2 AudioBook" },
-        { icon: iconRevistas, title: "PARANHANAREVISTAS", desc: "3 Revistas Digital Mensal" },
-      ],
-      benefitsAdd2: [
-        { icon: iconGloboPlay, title: "logo Globo Blay", desc: "Globo play" },
-      ],
-      msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano cinza.",
-      variant: "cinza" as const,
     },
   ];
 

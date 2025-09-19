@@ -8,14 +8,17 @@ const IndiqueGanhe = () => {
     return (
         <section
             id="indique-ganhe"
-            className="
-    relative min-h-screen overflow-hidden flex items-center justify-center px-4
-    bg-[length:140%_60%] bg-[center_top] bg-no-repeat
-    lg:bg-[length:40%_60%] lg:bg-[left_top] lg:bg-repeat-y
-  "
-            style={{ backgroundImage: `url(${Fundo})` }}
-        >
+            className="relative min-h-screen overflow-hidden flex items-center justify-center px-4 bg-white">
 
+            <div
+                className="absolute inset-0 bg-no-repeat bg-[length:140%_60%] bg-[center_top] lg:hidden"
+                style={{ backgroundImage: `url(${Fundo})` }}
+            />
+            
+            <div
+                className="absolute inset-0 bg-no-repeat bg-[length:140%_60%] bg-[center_top] lg:hidden"
+                style={{ backgroundImage: `url(${Fundo})` }}
+            />
             <img
                 src={Logo}
                 alt="Logo de fundo"

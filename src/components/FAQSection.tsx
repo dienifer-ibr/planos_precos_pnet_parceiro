@@ -11,7 +11,7 @@ import { SiWhatsapp } from "react-icons/si";
 interface FAQ {
   id: string;
   question: string;
-  answer: string;
+  answer: string | string[];
 }
 
 interface FAQCategory {
@@ -25,40 +25,39 @@ const faqData: FAQCategory[] = [
     questions: [
       {
         id: "subscriber-1",
-        question: "QUAL É A COBERTURA DA PARANHANANET?",
+        question: "Onde a ParanhanaNet está disponível?",
         answer:
-          "A ParanhanaNet oferece cobertura nas cidades de Parobé, Taquara e Igrejinha, garantindo uma conexão de qualidade e confiável para nossos clientes em toda a região.",
+          "A ParanhanaNet atende as cidades de Parobé, Taquara e Igrejinha, garantindo uma conexão de qualidade e confiável para seus clientes em toda a região.",
       },
       {
         id: "subscriber-2",
-        question: "QUAL A VELOCIDADE MÉDIA DA INTERNET DA PARANHANANET?",
+        question: "Qual é a velocidade da internet da ParanhanaNet?",
         answer:
-          "A PARANHANANET oferece uma conexão de internet melhor que a média do país. Sua média de velocidade é de 525Mbps.",
+          "A ParanhanaNet oferece velocidades superiores à média nacional. Sua média de velocidade é de 525 Mbps. No rankings de velocidade no Rio Grande do Sul, a ParanhanaNet ocupa posições de destaque, com velocidades médias que variam entre 525 Mbps e 663 Mbps, dependendo da cidade.",
       },
       {
         id: "subscriber-3",
-        question: "COMO POSSO ENTRAR EM CONTATO COM O SUPORTE DA PARANHANANET FORA DO HORÁRIO COMERCIAL?",
+        question: "Como funciona o suporte fora do horário comercial?",
         answer:
-          "Facilitamos ainda mais para você: além de ligar, pode solicitar atendimento técnico pelo nosso app MK SAC ou Área do Cliente. Basta selecionar “Abrir Chamado”, descrever seu problema ou contatar-nos via WhatsApp pelo número 3543-1099.",
+          "O suporte técnico da ParanhanaNet está disponível 24 horas por dia, todos os dias da semana, incluindo feriados. Você pode entrar em contato pelo telefone (51) 3543-1099 ou pelo WhatsApp.",
       },
       {
         id: "subscriber-4",
-        question: "EXISTE UM LIMITE DE DADOS OU RESTRIÇÕES DE USO DA MINHA CONEXÃO DE INTERNET?",
+        question: "A instalação é realmente gratuita?",
         answer:
-          "Não há restrições de uso ou limites de dados na sua conexão de internet com a ParanhanaNet. Baixe, faça streaming e conecte vários dispositivos sem se preocupar com limitações.",
+          "Sim, a instalação é gratuita. Além disso, a ParanhanaNet oferece um super roteador Wi-Fi 6 sem custos adicionais.",
       },
       {
         id: "subscriber-5",
-        question: "COMO POSSO CONTRATAR OS SERVIÇOS DA PARANHANANET?",
-        answer:
-          "Para tornar tudo mais prático para você, ligue para 3543-1099 ou visite uma de nossas lojas:Parobé- R. Odorico Mosmann, 441- Sala 02- Centro, Parobé- RS, 95630-000 (Ao lado do Posto Ipiranga) / Taquara- R. Júlio de Castilhos, 2177- Sala 3- Centro, Taquara- RS, 95600-030 (Em frente ao Colégio Santa Terezinha) / Igrejinha- Av. Pres. Castelo Branco, 493- Centro, Igrejinha- RS, 95650-000 (Em frente ao Banco do Brasil) - Você também pode contatar-nos pelo nosso WhatsApp 3543-1099.",
-      },
-      {
-        id: "subscriber-6",
-        question: "A INSTALAÇÃO DA PARANHANANET É GRATUITA?",
-        answer:
-          "Sim, a instalação da ParanhanaNet é gratuita com qualquer plano que você escolher. Queremos que você aproveite nossa internet rápida e estável sem custos extras.",
-      },
+        question: "O que devo fazer se a internet cair ou ficar lenta?",
+        answer: [
+          "Se você estiver enfrentando problemas de conexão, verifique os seguintes pontos:",
+          "- Certifique-se de que o roteador está posicionado em um local central e livre de obstruções.",
+          "- Evite colocar o roteador próximo a objetos metálicos ou aparelhos eletrônicos que possam interferir no sinal.",
+          "- Conecte-se à rede Wi-Fi de 5,8 GHz, se disponível, para melhor desempenho.",
+          "- Caso o problema persista, entre em contato com o suporte técnico da ParanhanaNet, disponível 24 horas por dia."
+        ],
+      }
     ],
   },
 ];
@@ -89,8 +88,10 @@ const FAQSection: React.FC = () => {
                   <AccordionTrigger className="font-medium text-sm [&>svg]:text-blue-500">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="pt-1 text-sm">
-                    {faq.answer}
+                  <AccordionContent className="pt-1 text-sm space-y-2">
+                    {Array.isArray(faq.answer)
+                      ? faq.answer.map((line, idx) => <p key={idx}>{line}</p>)
+                      : faq.answer}
                   </AccordionContent>
                 </AccordionItem>
               ))}
