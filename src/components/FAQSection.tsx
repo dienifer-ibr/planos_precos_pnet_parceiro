@@ -106,7 +106,7 @@ const FAQSection: React.FC = () => {
                 "_blank"
               )
             }
-            className="inline-flex items-center space-x-2 px-6 py-2 text-sm border border-white rounded-md text-white bg-transparent hover:bg-white/10 transition"
+            className="mt-8 mb-16 inline-flex items-center space-x-2 px-6 py-2 text-sm border border-white rounded-md text-white bg-blue-500 hover:bg-blue-900 transition"
             type="button"
           >
             <SiWhatsapp className="w-5 h-5" />
