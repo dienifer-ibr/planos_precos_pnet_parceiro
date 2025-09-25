@@ -30,23 +30,23 @@ const HeroSection = () => {
         <div className="grid grid-cols-2 gap-12 items-center w-full">
           <div className="flex flex-col items-center text-center text-white space-y-8 -mt-16">
             <div className="opacity-90">
-              <img src={premio} alt="prêmio" className="w-68 mb-12 lg:w-72" />
-              <h2>
+              <img src={premio} alt="prêmio" className="w-68 mb-12 lg:w-72 lg:relative lg:left-36" />
+              <h2 className="lg:text-[30px]">
                 <strong>A MAIS VELOZ DO VALE DO PARANHANA</strong>
               </h2>
-              <p className="text-[10px] leading-none mt-2">
+              <p className="text-[10px] leading-none mt-2 lg:text-[25px]">
                 ENTRE AS 3 MELHORES DO ESTADO DO RS
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col items-end space-y-6">
+          <div className="flex flex-col items-end space-y-6 lg:relative lg:-top-10">
             {awardImages.map((image, index) => (
               <img
                 key={index}
                 src={image.src}
                 alt={image.alt}
-                className="w-56 lg:w-64 rounded-2xl shadow-lg object-contain"
+                className="w-56 lg:w-52 rounded-2xl shadow-lg object-contain"
               />
             ))}
           </div>

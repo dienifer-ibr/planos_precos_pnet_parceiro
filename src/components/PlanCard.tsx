@@ -34,6 +34,7 @@ interface Feature {
 interface PlanCardProps {
   title: string;
   title2: string;
+  title3?: string;
   description: string;
   features: Feature[];
   popular?: boolean;
@@ -49,6 +50,7 @@ interface PlanCardProps {
 export function PlanCard({
   title,
   title2,
+  title3,
   description,
   features,
   benefits,
@@ -147,7 +149,7 @@ export function PlanCard({
   const showCameraRight = cameraright ?? (variant === "marron" || variant === "neon" || variant === "dourado");
 
   return (
-    <Card className={`relative overflow-hidden transition-all duration-300 mb-8 lg:mb-24 ${variantClasses.card}`}>
+    <Card className={`relative overflow-hidden transition-all duration-300 mb-8 lg:mb-24 lg:h-full ${variantClasses.card}`}>
       <CardHeader className="text-initial pb-8 lg:-pb-2 relative">
         {(showCameraLeft || showCameraRight) && (
           <img
@@ -155,17 +157,22 @@ export function PlanCard({
             alt="Câmera"
             className={
               showCameraRight
-                ? "absolute top-36 left-56 w-20 h-20 lg:w-18 lg:h-18"
-                : "absolute top-32 right-56 w-20 h-20 lg:w-18 lg:h-18"
+                ? "absolute top-36 left-56 w-20 h-20 lg:w-18 lg:h-18 lg:top-40"
+                : "absolute top-32 right-56 w-20 h-20 lg:w-18 lg:h-18 lg:top-40"
             }
           />
         )}
 
-        <CardTitle className={`text-2x1 sm:text-2xl md:text-3xl lg:text-2xl font-bold ${variantClasses.title}`}>
+        <CardTitle
+          className={`text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold lg:relative lg:left-1/2 lg:-translate-x-1/2 text-center lg:-bottom-[18px] ${variantClasses.title}`}
+        >
           {title}
         </CardTitle>
-        <CardTitle className={`text-4xl sm:text-4xl md:text-5xl lg:text-3xl font-bold ${variantClasses.title}`}>
+        <CardTitle className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold lg:left-1/2 text-center ${variantClasses.title}`}>
           {title2}
+        </CardTitle>
+        <CardTitle   className={`lg:text-xl text-base font-bold relative lg:left-1/2 lg:-translate-x-1/2 text-right -top-[15px] lg:-top-[10px] ${variantClasses.title}`}>
+          {title3}
         </CardTitle>
         <CardDescription className="text-center text-xs sm:text-sm md:text-base lg:text-sm text-muted-foreground">
           {description}
@@ -227,7 +234,7 @@ export function PlanCard({
         </div>
       </CardHeader>
 
-      <CardContent className="space-y-1">
+      <CardContent className="space-y-1 lg:h-full">
         <div className="flex justify-center mb-2 lg:mt-2">
           <button className={`p-2 rounded-full ${variantClasses.iconAdd}`}>
             <FaPlus size={8} />
@@ -270,6 +277,6 @@ export function PlanCard({
           </a>
         </Button>
       </CardContent>
-    </Card>
+    </Card >
   );
 }

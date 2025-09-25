@@ -15,7 +15,7 @@ export function PricingSection() {
   const plans = [
     {
       title: "Plano",
-      title2: "Laranja",
+      title2: "LARANJA",
       description: "Internet estável para o dia a dia, sem travar",
       features: [
         { icon: FaMicrophone, desc: "Mão de obra especializada" },
@@ -35,7 +35,7 @@ export function PricingSection() {
     },
     {
       title: "Plano",
-      title2: "Marron",
+      title2: "MARROM",
       description: "Conectividade de alto nível para todos os seus dispositivos",
       features: [
         { icon: FaMicrophone, desc: "Mão de obra especializada" },
@@ -56,7 +56,7 @@ export function PricingSection() {
     },
     {
       title: "Plano",
-      title2: "Marfim",
+      title2: "MARFIM",
       description: "Potência e performance para todos os seus dispositivos",
       features: [
         { icon: FaMicrophone, desc: "Mão de obra especializada" },
@@ -76,7 +76,7 @@ export function PricingSection() {
     },
     {
       title: "Plano",
-      title2: "Cinza",
+      title2: "CINZA",
       description: "Internet de sobra para toda a família",
       features: [
         { icon: FaMicrophone, desc: "Mão de obra especializada" },
@@ -100,7 +100,8 @@ export function PricingSection() {
     },
     {
       title: "Plano",
-      title2: "Bordô",
+      title2: "BORDÔ",
+      title3: "HOME",
       description: "Internet de sobra para toda a família",
       features: [
         { icon: FaMicrophone, desc: "Mão de obra especializada" },
@@ -125,7 +126,8 @@ export function PricingSection() {
     },
     {
       title: "Plano",
-      title2: "Neon Gamer",
+      title2: "NEON",
+      title3: "GAMER",
       description: "A conexão ideal para quem leva o game a sério",
       features: [
         { icon: FaMicrophone, desc: "Mão de obra especializada" },
@@ -150,7 +152,8 @@ export function PricingSection() {
     },
     {
       title: "Plano",
-      title2: "Dourado Business",
+      title2: "DOURADO",
+      title3: "BUSINESS",
       description: "Potência e performance para todos os seus dispositivos",
       features: [
         { icon: FaMicrophone, desc: "Mão de obra especializada" },
@@ -237,11 +240,11 @@ export function PricingSection() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-sm text-muted-foreground text-white  ">
+            <p className="text-sm text-muted-foreground text-blue-600  ">
               Tem dúvidas? Entre em contato conosco através do{" "}
               <a
                 href="tel:513543-1099"
-                className="text-primary hover:underline font-medium text-white"
+                className="text-primary hover:underline font-medium text-blue-900"
               >
                 (51) 3543-1099
               </a>

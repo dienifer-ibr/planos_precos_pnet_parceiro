@@ -22,7 +22,7 @@ const ParanhanaRevistas: React.FC = () => {
                     <img
                         src={CelularRevistas}
                         alt="Celular Revistas"
-                        className="h-auto object-center w-80 lg:w-68 lg:w-96 lg:relative lg:-right-96"
+                        className="h-auto object-center w-80 lg:w-[500px] lg:relative lg:-right-96"
                     />
                 </div>
                 <div className="mt-[400px] w-[90%] max-w-4xl px-4 md:px-6 text-center lg:relative lg:-left-60 lg:-top-60 lg:max-w-3xl">

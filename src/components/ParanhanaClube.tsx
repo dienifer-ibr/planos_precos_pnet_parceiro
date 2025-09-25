@@ -15,7 +15,7 @@ const ParanhanaClube = () => {
       <img
         src={LogoFundo}
         alt="Logo de fundo"
-        className="absolute inset-0 w-full object-cover opacity-100 lg:top-24 lg:left-80"
+        className="absolute inset-0 w-full object-cover opacity-100 lg:top-[50px] lg:left-[150px]"
         style={{ height: '90%', maxWidth: '600px', zIndex: 0 }}
       />
 
@@ -23,13 +23,13 @@ const ParanhanaClube = () => {
         <img
           src={CllParanhanaClube}
           alt="Decorativa"
-          className="w-64 md:w-96 relative -top-4 md:-top-16 right-20 lg:w-80 lg:right-96 lg:top-20"
+          className="w-64 md:w-96 relative -top-4 md:-top-16 right-20 lg:w-[400px] lg:right-96 lg:top-2"
         />
-        <h1 className="text-white text-5xl md:text-6xl font-semibold text-end -mb-24 md:mb-6 leading-tight relative -top-36 left-14 lg:left-80 lg:-mb-8 lg:-top-72">
+        <h1 className="text-white text-5xl md:text-6xl font-semibold text-end -mb-24 md:mb-6 leading-tight relative -top-36 left-14 lg:left-80 lg:-mb-8 lg:-top-[450px]">
           Vantagens <br />
           <span className="text-6xl md:text-6xl font-bold">Exclusivas</span>
         </h1>
-        <p className="text-white text-initial mb-5 text-xl px-8 relative lg:left-96 lg:-top-36">
+        <p className="text-white text-initial mb-5 text-xl px-8 relative lg:left-96 lg:-top-[380px]">
           Até <strong>50% de descontos</strong> em <strong>lojas online</strong> e <strong>estabelecimentos</strong> da região
         </p>
 
