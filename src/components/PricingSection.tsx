@@ -123,7 +123,7 @@ export function PricingSection() {
       ],
       msg: "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre o plano bordô.",
       variant: "bordo" as const,
-    },
+    }, 
     {
       title: "Plano",
       title2: "NEON",
