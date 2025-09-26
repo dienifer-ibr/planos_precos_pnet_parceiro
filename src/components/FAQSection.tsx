@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 
 import { SiWhatsapp } from "react-icons/si";
+import Logo from "@/assets/logo-azul.png";
 
 interface FAQ {
   id: string;
@@ -65,11 +66,18 @@ const faqData: FAQCategory[] = [
 const FAQSection: React.FC = () => {
   return (
     <section
-      className="py-8 text-black"
+      className="relative py-8 text-black" 
       style={{
         background: "linear-gradient(135deg, #ffffffff 0%, #ffffffff 100%)",
       }}
     >
+      <img
+        src={Logo}
+        alt="Background decorativo"
+        className="hidden lg:block absolute top-20 -left-[7%] max-w-[800px] opacity-80 pointer-events-none w-[30%]"
+        style={{ zIndex: 0 }}
+      />
+
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold text-blue-600 mb-2">FAQ</h2>
