@@ -177,4 +177,14 @@
   .swiper-button-prev {
     margin-right: 40px !important;
   }
+
+  #planos {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  #planosMobile {
+    display: none !important;
+  }
 }

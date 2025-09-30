@@ -17,18 +17,18 @@ import "swiper/css/pagination";
 import Watch from "@/components/Watch";
 import IndiqueGanhe from "@/components/IndiqueGanhe";
 import Formulario from '@/components/Formulario';
+import PricingSectionMobile from "@/components/PricingSectionMobile";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      {/*<Header />*/}
       <main>
         <HeroSection />
         <TechSection />
         <PricingSection />
-
+        <PricingSectionMobile />
         <Swiper
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          modules={[Navigation, Pagination, Keyboard]}
           spaceBetween={0}
           slidesPerView={1}
           navigation
@@ -49,7 +49,7 @@ const Index = () => {
         </Swiper>
 
         <Swiper
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          modules={[Navigation, Pagination, Keyboard]}
           spaceBetween={0}
           slidesPerView={1}
           navigation
