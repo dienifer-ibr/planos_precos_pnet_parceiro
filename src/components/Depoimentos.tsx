@@ -57,65 +57,65 @@ const videosData: VideoData[] = [
 const reviewsData: ReviewData[] = [
   {
     id: "r1",
+    name: "alberto bohler",
+    avatar:
+      "https://lh3.googleusercontent.com/a-/ALV-UjU4LzKCuCdTRPYsjVrZ3dAsY_zTR-eVVSag3Wl2_frCGPcK6-II2g=w90-h90-p-rp-mo-br100",
+    rating: 5,
+    comment: "Sem dúvida o melhor provedor de Internet do vale",
+    date: "2025-09-02",
+    location: "",
+  },
+  {
+    id: "r2",
+    name: "Rodrigo Silva Hessler",
+    avatar:
+      "https://lh3.googleusercontent.com/a/ACg8ocLTVx4xaFNrRqS8uQSh8K5E6KWtdH0CB03RfjVyfRS2p-4wUw=w90-h90-p-rp-mo-br100",
+    rating: 5,
+    comment:
+      "Internet de excelência e suporte perfeito!! 😍😍",
+    date: "2025-07-25",
+    location: "",
+  },
+  {
+    id: "r3",
     name: "Djonatan Djou",
     avatar:
       "https://lh3.googleusercontent.com/a-/ALV-UjV323UbqFiszOJ6KCJ8NBK2tMNTav2BHy9Z1Qwk8oaMONpQUbAoRA=w90-h90-p-rp-mo-br100",
     rating: 5,
-    comment: "Melhor internet que já tive!",
-    date: "2025-01-07",
-    location: "Parobé, RS",
-  },
-  {
-    id: "r2",
-    name: "Ana Costa",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    rating: 5,
     comment:
-      "Melhor provedor da região! Suporte técnico excepcional e internet de qualidade.",
-    date: "2025-07-25",
-    location: "Parobé, RS",
-  },
-  {
-    id: "r3",
-    name: "Fernanda Lima",
-    avatar:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    rating: 5,
-    comment:
-      "Atendimento personalizado e internet de fibra óptica excelente. Muito satisfeita!",
-    date: "2025-08-10",
-    location: "Três Coroas, RS",
+      "Melhor internet que já tive!",
+    date: "2025-02-10",
+    location: "",
   },
   {
     id: "r4",
-    name: "Lucas Pereira",
+    name: "Kah Rocha",
     avatar:
-      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=150&h=150&fit=crop&crop=face",
+      "https://lh3.googleusercontent.com/a-/ALV-UjWuHPQbl431hNC6j1QTaKLBV2-_UV8t5xDVzrGP3OVpLwlD2gnT=w90-h90-p-rp-mo-br100",
     rating: 5,
-    comment: "Excelente suporte e conexão estável. Recomendo!",
+    comment: "A melhor internet",
     date: "2025-08-11",
-    location: "Novo Hamburgo, RS",
+    location: "",
   },
   {
     id: "r5",
-    name: "Rafael Souza",
+    name: "gilberto luiz dos santos",
     avatar:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
+      "https://lh3.googleusercontent.com/a-/ALV-UjWDkViNjMMvPLDj71T1VjcUMuo2AZHHuJI7M240FMMCsZttUHDW4A=w90-h90-p-rp-mo-br100",
     rating: 5,
-    comment: "Internet super rápida, ótimo atendimento!",
-    date: "2025-08-13",
-    location: "Gramado, RS",
+    comment: "Empresa muito séria, prioriza sempre o bom atendimento!!!",
+    date: "2024-09-13",
+    location: "",
   },
   {
     id: "r6",
-    name: "Pedro Henrique",
+    name: "Patrick Ruizdias",
     avatar:
-      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
+      "https://lh3.googleusercontent.com/a-/ALV-UjUFiI1Yo8lKpqIVpHGF62DSOAubgRwoPwE_fXUMvm49cxAxZcpJXA=w90-h90-p-rp-mo-br100",
     rating: 5,
-    comment: "Excelente atendimento e velocidade de internet incrível!",
-    date: "2025-08-13",
-    location: "Bento Gonçalves, RS",
+    comment: "Muito top Recomendadíssimo!!!",
+    date: "2024-09-10",
+    location: "",
   },
 ];
 
@@ -147,10 +147,15 @@ const ReviewsShowcase = () => {
 
       <div className="relative max-w-16xl mx-auto px-4 sm:px-6 lg:px-8 mb-48">
         <div className="mb-16 flex flex-col">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white">
-              O que dizem nossos clientes?
-            </h2>
+          <div className="flex items-center justify-between mb-8 lg:flex-col lg:items-center lg:justify-center">
+            <div className="lg:text-center">
+              <h1 className="text-3xl lg:text-6xl font-bold text-white">
+                <strong>FeedBacks</strong>
+              </h1>
+              <h2 className="text-2xl lg:text-2xl font-bold text-white mt-2">
+                O que dizem nossos clientes?
+              </h2>
+            </div>
             <div className="flex gap-2 lg:hidden">
               <Button variant="outline" size="icon" onClick={goToPreviousVideo}>
                 <ChevronLeft className="h-5 w-5" />
@@ -160,6 +165,7 @@ const ReviewsShowcase = () => {
               </Button>
             </div>
           </div>
+
 
           <div className="relative flex justify-center gap-6 top-16 flex-wrap lg:flex-nowrap">
             {videosData.map((video, idx) => (

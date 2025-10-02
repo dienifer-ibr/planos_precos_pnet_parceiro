@@ -31,14 +31,14 @@ const IndiqueGanhe = () => {
                 />
 
                 <div className="flex flex-col items-center lg:items-start lg:max-w-[50%]">
-                    <h1 className="text-lg text-blue-800 mb-6 lg:text-[4.3rem] lg:mb-16 lg:leading-snug lg:text-center lg:-left-[40%] lg:relative font-bold">INDIQUE & GANHE</h1>
-                    <p className="text-lg text-blue-800 mb-6 lg:text-[2.5rem] lg:mb-16 lg:leading-snug lg:text-center lg:-left-[30%] lg:relative">
+                    <h1 className="text-lg text-blue-800 mb-6 lg:text-[4.3rem] lg:mb-16 lg:leading-snug lg:text-center lg:-left-[15%] lg:relative font-bold">INDIQUE & GANHE</h1>
+                    <p className="text-lg text-blue-800 mb-6 lg:text-[2.5rem] lg:mb-16 lg:leading-snug lg:text-center lg:-left-[8%] lg:relative">
                         Ganhe até <strong>1 mês de internet <br />grátis</strong> por indicação.
                     </p>
                     <Button
                         size="lg"
                         asChild
-                        className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 lg:py-8 lg:px-12 rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 lg:text-[1.2rem] lg:relative lg:-left-[8%]"
+                        className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 lg:py-8 lg:px-12 rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 lg:text-[1.2rem] lg:relative lg:left-[12%]"
                     >
                         <a
                             href="https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre a campanha Indique e Ganhe."

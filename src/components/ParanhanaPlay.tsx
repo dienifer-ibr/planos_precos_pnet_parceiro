@@ -37,7 +37,7 @@ const ParanhanaPlay: React.FC = () => {
                 />
 
                 <div
-                className="absolute inset-0 hidden lg:block h-[400px] -top-[100px] -right-[700px]"
+                className="absolute inset-0 hidden lg:block h-[400px] -top-[100px] -right-[85%]"
                 style={{
                     backgroundImage: `url(${ParanhanaPlayDesktop})`,
                     backgroundRepeat: "no-repeat",
@@ -51,10 +51,10 @@ const ParanhanaPlay: React.FC = () => {
                 <img
                     src={LogoParanhana_Play}
                     alt="Logo Paranhana Play"
-                    className="absolute top-[-50px] left-[38%] transform -translate-x-1/2 w-3/4 lg:w-[450px] lg:-top-[200px] lg:-left-10"
+                    className="absolute top-[-50px] left-[38%] transform -translate-x-1/2 w-3/4 lg:w-[60%] lg:-top-[120%] lg:-left-[8%]"
                 />
 
-                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-3xl mt-10 lg:relative lg:-left-[400px] lg:top-[10px]">
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-3xl mt-10 lg:relative lg:-left-[45%] lg:top-[5%]">
                     +2000 filmes, +150 canais de TV grátis e streaming on-demand em qualquer lugar.
                 </p>
             </div>

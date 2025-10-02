@@ -74,7 +74,7 @@ const FAQSection: React.FC = () => {
       <img
         src={Logo}
         alt="Background decorativo"
-        className="hidden lg:block absolute top-20 -left-[7%] max-w-[800px] opacity-80 pointer-events-none w-[30%]"
+        className="hidden lg:block absolute opacity-20 -top-[5%] pointer-events-none w-[50%]"
         style={{ zIndex: 0 }}
       />
 

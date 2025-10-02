@@ -41,10 +41,10 @@ const Watch: React.FC = () => {
                         className="
   relative top-4 left-1/2 -translate-x-1/2
   w-1/2 max-w-sm
-  lg:-top-[100px] lg:w-[300px] lg:max-w-none lg:-left-[2px] 
+  lg:-top-[15%] lg:w-[300px] lg:max-w-none lg:-left-[2px] 
 "
                     />
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-0 lg:text-7xl lg:-top-[120px] lg:relative lg:-left-[30px]">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-0 lg:text-7xl lg:-top-[15%] lg:relative lg:-left-[30px]">
                         +
                     </h2>
                     <img
@@ -53,7 +53,7 @@ const Watch: React.FC = () => {
                         className="
   relative -top-4 left-1/2 -translate-x-1/2
   w-1/2 max-w-sm
-  lg:-top-[140px] lg:w-[300px] lg:max-w-none lg:-left-[2px]
+  lg:-top-[18%] lg:w-[300px] lg:max-w-none lg:-left-[2px]
 "
                     />
                 </div>
@@ -65,11 +65,11 @@ const Watch: React.FC = () => {
                         src={FilmesPipocas}
                         alt="Filmes e pipocas"
                         className="absolute w-full h-auto object-contain mb-0
-                                   lg:static lg:w-[700px]"
+                                    lg:w-[90%]"
                     />
 
                     <p className="mt-96 mb-20 text-base sm:text-lg md:text-xl lg:text-2xl px-4 md:px-6 text-center 
-                                  lg:-mt-64 lg:mb-4 lg:px-0 lg:text-left lg:relative lg:-left-[700px]">
+                                  lg:mt-96 lg:mb-4 lg:px-0 lg:relative lg:-left-[100%] lg:w-[60%]">
                         Acesse quando e onde estiver, Canais de tv aberta, Séries e Filmes
                     </p>
                     <p className="mt-1 text-sm sm:text-base md:text-lg text-center 
