@@ -288,12 +288,11 @@ export function PlanCard({
           className={`absolute w-[80%] text-xs sm:text-sm md:text-base py-2 sm:py-3 mt-72 ${variantClasses.button}`}
         >
           <a
-            href={msg}
-            target="_blank"
+            href="#contato"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2"
           >
-            <SiWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+            {/* <SiWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" /> */}
             Contrate Já
           </a>
         </Button>

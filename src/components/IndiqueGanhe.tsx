@@ -41,11 +41,10 @@ const IndiqueGanhe = () => {
                         className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 lg:py-8 lg:px-12 rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 lg:text-[1.2rem] lg:relative lg:left-[12%]"
                     >
                         <a
-                            href="https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de mais informações sobre a campanha Indique e Ganhe."
-                            target="_blank"
+                            href="#contato"
                             rel="noopener noreferrer"
                         >
-                            <SiWhatsapp className="w-6 h-6" />
+                            {/* <SiWhatsapp className="w-6 h-6" /> */}
                             Mais informações
                         </a>
                     </Button>

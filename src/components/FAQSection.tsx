@@ -66,7 +66,7 @@ const faqData: FAQCategory[] = [
 const FAQSection: React.FC = () => {
   return (
     <section
-      className="relative py-8 text-black" 
+      className="relative py-8 text-black"
       style={{
         background: "linear-gradient(135deg, #ffffffff 0%, #ffffffff 100%)",
       }}
@@ -107,19 +107,13 @@ const FAQSection: React.FC = () => {
           </div>
         ))}
         <div className="text-center">
-          <button
-            onClick={() =>
-              window.open(
-                "https://api.whatsapp.com/send/?phone=555135431099&text=Olá, gostaria de tirar algumas dúvidas.",
-                "_blank"
-              )
-            }
+          <a
+            href="#contato"
             className="mt-8 mb-16 inline-flex items-center space-x-2 px-6 py-2 text-sm border border-white rounded-md text-white bg-blue-500 hover:bg-blue-900 transition"
-            type="button"
           >
-            <SiWhatsapp className="w-5 h-5" />
             <span>Outras dúvidas!</span>
-          </button>
+          </a>
+
         </div>
       </div>
     </section >
