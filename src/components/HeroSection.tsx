@@ -40,13 +40,13 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-end space-y-6 lg:grid lg:grid-cols-2 lg:gap-6 lg:items-center lg:space-y-0 lg:relative lg:-right-[20%]">
+          <div className="flex flex-col items-end space-y-6 lg:grid lg:grid-cols-2 lg:gap-6 lg:items-center lg:space-y-0 lg:relative lg:-right-[5%]">
             {awardImages.map((image, index) => (
               <img
                 key={index}
                 src={image.src}
                 alt={image.alt}
-                className="w-56 lg:w-52 rounded-2xl shadow-lg object-contain"
+                className="w-56 lg:w-60 rounded-2xl object-contain"
               />
             ))}
           </div>
