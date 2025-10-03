@@ -4,7 +4,7 @@ import FilmesPipocas from "@/assets/filmes-pipocas.png";
 import LogoWatch from "@/assets/logoWatch2.png";
 import LogoParamount from "@/assets/logoParamount.png";
 import WatchDesktop from "@/assets/watchDesktop.png";
-
+import FilmesPipocasDesktop from "@/assets/filmes-pipocas-destop.png"
 const Watch: React.FC = () => {
     return (
         <section id="watch-paramount"
@@ -61,11 +61,19 @@ const Watch: React.FC = () => {
 
                 <div className="w-full max-w-3xl relative 
                                 lg:flex lg:flex-col lg:items-center lg:justify-center">
+                    {/* Imagem Mobile */}
                     <img
                         src={FilmesPipocas}
                         alt="Filmes e pipocas"
-                        className="absolute w-full h-auto object-contain mb-0
-                                    lg:w-[90%]"
+                        className="absolute w-full h-auto object-contain mb-0 
+             lg:hidden"
+                    />
+
+                    {/* Imagem Desktop */}
+                    <img
+                        src={FilmesPipocasDesktop}
+                        alt="Filmes e pipocas"
+                        className="absolute hidden lg:block w-[90%] h-auto object-contain mb-0"
                     />
 
                     <p className="mt-96 mb-20 text-base sm:text-lg md:text-xl lg:text-2xl px-4 md:px-6 text-center 

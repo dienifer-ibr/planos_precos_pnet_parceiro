@@ -156,7 +156,7 @@ export function PlanCard({
   const showCameraRight = cameraleft ?? (variant === "laranja" || variant === "marfim");
 
   return (
-    <Card className={`relative overflow-hidden transition-all duration-300 mb-8 lg:mb-24 h-[950px] border-2 ${variantClasses.card} ${variantClasses.borderColor}`}>
+    <Card className={`relative overflow-hidden transition-all duration-300 mb-8 lg:mb-24 h-[950px] ${variantClasses.card}`}>
       <CardHeader className="text-initial pb-8 lg:-pb-2 relative">
         {(showCameraLeft || showCameraRight) && (<img
           src={showCameraLeft ? cameraEsquerda : cameraDireita}
